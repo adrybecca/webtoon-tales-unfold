@@ -1,5 +1,6 @@
 
-import { BookOpen, Mail, Twitter, Instagram, Facebook } from "lucide-react";
+import { Mail, Twitter, Instagram, Facebook } from "lucide-react";
+import { LogoWithBackground } from "./LogoWithBackground";
 
 export const Footer = () => {
   return (
@@ -8,8 +9,7 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center mb-4">
-              <BookOpen className="w-8 h-8 text-pink-400 mr-3" />
-              <span className="text-xl font-bold text-white">Mythic Tales</span>
+              <LogoWithBackground className="h-10 w-auto mr-3" />
             </div>
             <p className="text-slate-400 mb-6 max-w-md">
               Bringing traditional stories and legends from every culture to life through beautiful webtoon-style art. 

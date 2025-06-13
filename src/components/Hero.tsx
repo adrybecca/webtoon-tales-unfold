@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, BookOpen, Globe } from "lucide-react";
+import { ArrowRight, BookOpen } from "lucide-react";
+import { LogoWithBackground } from "./LogoWithBackground";
 
 export const Hero = () => {
   return (
@@ -14,8 +15,7 @@ export const Hero = () => {
       
       <div className="relative z-10 text-center max-w-4xl mx-auto">
         <div className="flex items-center justify-center mb-6">
-          <Globe className="w-8 h-8 text-pink-400 mr-3" />
-          <span className="text-pink-400 font-semibold text-lg tracking-wide">MYTHIC TALES</span>
+          <LogoWithBackground className="h-16 w-auto mr-3" />
         </div>
         
         <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-pink-200 to-purple-300 bg-clip-text text-transparent mb-6 leading-tight">
