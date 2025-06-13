@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, BookOpen } from "lucide-react";
 import { LogoWithBackground } from "./LogoWithBackground";
@@ -14,8 +13,8 @@ export const Hero = () => {
       <div className="absolute bottom-32 right-16 w-24 h-24 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-lg opacity-30 animate-pulse" />
       
       <div className="relative z-10 text-center max-w-4xl mx-auto">
-        <div className="flex items-center justify-center mb-6">
-          <LogoWithBackground className="h-16 w-auto mr-3" />
+        <div className="flex items-center justify-center mb-8">
+          <LogoWithBackground className="h-24 md:h-32 w-auto" />
         </div>
         
         <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-pink-200 to-purple-300 bg-clip-text text-transparent mb-6 leading-tight">

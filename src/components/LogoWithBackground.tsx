@@ -79,23 +79,39 @@ const removeBackground = async (imageElement: HTMLImageElement): Promise<string>
     // Draw original image
     outputCtx.drawImage(canvas, 0, 0);
     
-    // Apply the mask
-    const outputImageData = outputCtx.getImageData(
-      0, 0,
-      outputCanvas.width,
-      outputCanvas.height
-    );
+    // Apply the mask to remove white/light backgrounds more aggressively
+    const outputImageData = outputCtx.getImageData(0, 0, outputCanvas.width, outputCanvas.height);
     const data = outputImageData.data;
     
-    // Apply inverted mask to alpha channel
+    // More aggressive background removal for white/light backgrounds
+    for (let i = 0; i < data.length; i += 4) {
+      const r = data[i];
+      const g = data[i + 1];
+      const b = data[i + 2];
+      
+      // Check if pixel is close to white/light colors
+      const isLight = (r > 200 && g > 200 && b > 200) || 
+                      (r + g + b > 600);
+      
+      if (isLight) {
+        data[i + 3] = 0; // Make transparent
+      }
+    }
+    
+    // Apply segmentation mask for additional refinement
     for (let i = 0; i < result[0].mask.data.length; i++) {
-      // Invert the mask value (1 - value) to keep the subject instead of the background
-      const alpha = Math.round((1 - result[0].mask.data[i]) * 255);
-      data[i * 4 + 3] = alpha;
+      const maskValue = result[0].mask.data[i];
+      // Keep subject, remove background
+      if (maskValue > 0.5) {
+        const pixelIndex = i * 4 + 3;
+        if (pixelIndex < data.length) {
+          data[pixelIndex] = Math.min(data[pixelIndex], Math.round((1 - maskValue) * 255));
+        }
+      }
     }
     
     outputCtx.putImageData(outputImageData, 0, 0);
-    console.log('Mask applied successfully');
+    console.log('Background removal completed successfully');
     
     // Convert canvas to data URL
     return outputCanvas.toDataURL('image/png', 1.0);
@@ -148,7 +164,7 @@ export const LogoWithBackground = ({ className = "", alt = "Mythic Tales Logo" }
   if (isProcessing) {
     return (
       <div className={`flex items-center justify-center ${className}`}>
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-pink-400"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-pink-400"></div>
       </div>
     );
   }
@@ -156,7 +172,7 @@ export const LogoWithBackground = ({ className = "", alt = "Mythic Tales Logo" }
   if (error && !processedImageSrc) {
     return (
       <div className={`text-pink-400 ${className}`}>
-        <span className="text-xl font-bold">MYTHIC TALES</span>
+        <span className="text-2xl font-bold">MYTHIC TALES</span>
       </div>
     );
   }
@@ -165,7 +181,8 @@ export const LogoWithBackground = ({ className = "", alt = "Mythic Tales Logo" }
     <img 
       src={processedImageSrc} 
       alt={alt}
-      className={className}
+      className={`${className} drop-shadow-lg`}
+      style={{ filter: 'drop-shadow(0 0 10px rgba(219, 39, 119, 0.3))' }}
     />
   );
 };
