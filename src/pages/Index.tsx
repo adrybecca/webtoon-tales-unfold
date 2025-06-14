@@ -1,11 +1,10 @@
-
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { FeaturedStories } from "@/components/FeaturedStories";
 import { UploadSection } from "@/components/UploadSection";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, BookOpen, PenTool, Users, Globe, Sparkles, Heart } from "lucide-react";
+import { ArrowRight, BookOpen, PenTool, Users, Globe, Sparkles, Heart, Star, Award, Shield } from "lucide-react";
 
 const Index = () => {
   const handleCultureClick = (cultureName: string) => {
@@ -37,42 +36,46 @@ const Index = () => {
         <FeaturedStories />
       </section>
       
-      {/* Browse by Culture Section */}
-      <section id="cultures" className="py-20 px-4">
+      {/* Enhanced Browse by Culture Section */}
+      <section id="cultures" className="py-24 px-4 bg-gradient-to-r from-slate-800/30 to-purple-800/20">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent mb-8">
-            Explore Tales by Culture
-          </h2>
-          <p className="text-xl text-slate-400 mb-8 max-w-3xl mx-auto">
-            Immerse yourself in a rich tapestry of storytelling traditions from around the world. Each culture has its own unique stories that have been passed down from generation to generation, shaping values, teaching important lessons and preserving ancestral wisdom.
-          </p>
-          <p className="text-lg text-slate-500 mb-12 max-w-4xl mx-auto">
-            Our collections include classic myths, heroic legends, traditional fairy tales, moral fables and creation stories. From the mystical dragons of Asia to the brave warriors of Africa, from the enchanted princesses of Europe to the ancestral spirits of America, each story is carefully adapted for modern readers while preserving its authentic cultural essence.
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+          <div className="mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-pink-200 to-purple-300 bg-clip-text text-transparent mb-8">
+              Explore Tales by Culture
+            </h2>
+            <div className="w-32 h-1 bg-gradient-to-r from-pink-500 to-violet-500 mx-auto mb-8 rounded-full"></div>
+            <p className="text-2xl text-slate-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Immerse yourself in a rich tapestry of storytelling traditions from around the world. Each culture has its own unique stories that have been passed down from generation to generation.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {[
-              { name: 'Asia', description: 'Dragons, samurai and ancestral wisdom', icon: '🐉' },
-              { name: 'Europe', description: 'Fairies, knights and enchanted castles', icon: '🏰' },
-              { name: 'Africa', description: 'Nature spirits and brave heroes', icon: '🦁' },
-              { name: 'Americas', description: 'Ancient gods and epic adventures', icon: '🦅' },
-              { name: 'Oceania', description: 'Ancestral dreams and creation myths', icon: '🌊' },
-              { name: 'Middle East', description: 'Magic genies and tales of the Arabian nights', icon: '🧞‍♂️' }
+              { name: 'Asia', description: 'Dragons, samurai and ancestral wisdom', icon: '🐉', gradient: 'from-red-500 to-orange-500' },
+              { name: 'Europe', description: 'Fairies, knights and enchanted castles', icon: '🏰', gradient: 'from-blue-500 to-purple-500' },
+              { name: 'Africa', description: 'Nature spirits and brave heroes', icon: '🦁', gradient: 'from-yellow-500 to-orange-600' },
+              { name: 'Americas', description: 'Ancient gods and epic adventures', icon: '🦅', gradient: 'from-emerald-500 to-teal-600' },
+              { name: 'Oceania', description: 'Ancestral dreams and creation myths', icon: '🌊', gradient: 'from-cyan-500 to-blue-600' },
+              { name: 'Middle East', description: 'Magic genies and tales of the Arabian nights', icon: '🧞‍♂️', gradient: 'from-purple-500 to-pink-500' }
             ].map((culture) => (
               <div 
                 key={culture.name} 
-                className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300 cursor-pointer transform hover:scale-105 hover:shadow-lg hover:shadow-pink-500/20 group"
+                className="group relative bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-sm rounded-xl p-8 hover:bg-slate-700/60 transition-all duration-500 cursor-pointer transform hover:scale-105 hover:-translate-y-2 hover:shadow-2xl border border-slate-700/50"
                 onClick={() => handleCultureClick(culture.name)}
               >
-                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
-                  {culture.icon}
-                </div>
-                <h3 className="text-white font-semibold mb-2 group-hover:text-pink-300 transition-colors">
-                  {culture.name}
-                </h3>
-                <p className="text-slate-400 text-sm">{culture.description}</p>
-                <div className="mt-4 flex items-center text-pink-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity">
-                  <span>Explore now</span>
-                  <ArrowRight className="w-4 h-4 ml-1" />
+                <div className={`absolute inset-0 bg-gradient-to-br ${culture.gradient} opacity-0 group-hover:opacity-20 rounded-xl transition-opacity duration-500`} />
+                <div className="relative z-10">
+                  <div className="text-5xl mb-4 group-hover:scale-125 transition-transform duration-500 animate-bounce">
+                    {culture.icon}
+                  </div>
+                  <h3 className="text-white font-bold text-xl mb-3 group-hover:text-pink-300 transition-colors">
+                    {culture.name}
+                  </h3>
+                  <p className="text-slate-400 text-sm group-hover:text-slate-300 transition-colors">{culture.description}</p>
+                  <div className="mt-6 flex items-center justify-center text-pink-400 text-sm opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0">
+                    <span className="font-semibold">Explore now</span>
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </div>
                 </div>
               </div>
             ))}
@@ -80,55 +83,67 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 px-4 bg-slate-800/20">
+      {/* Enhanced Testimonials Section */}
+      <section className="py-24 px-4 bg-gradient-to-r from-purple-900/30 to-pink-900/20">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent mb-16 text-center">
-            What Our Families Say
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-slate-800/40 rounded-lg p-8">
-              <p className="text-slate-300 mb-6 italic">
-                "Mythic Tales has transformed story time in our family. My children now know stories from their grandparents and from cultures around the world. The webtoon-style illustrations are absolutely beautiful and keep the kids completely absorbed."
-              </p>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-violet-500 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-white font-bold">M</span>
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-pink-200 to-purple-300 bg-clip-text text-transparent mb-8">
+              What Our Families Say
+            </h2>
+            <div className="w-32 h-1 bg-gradient-to-r from-pink-500 to-violet-500 mx-auto mb-8 rounded-full"></div>
+            <div className="flex justify-center space-x-2 mb-8">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-8 h-8 text-yellow-400 fill-current animate-pulse" style={{animationDelay: `${i * 0.2}s`}} />
+              ))}
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {[
+              {
+                text: "Mythic Tales has transformed story time in our family. My children now know stories from their grandparents and from cultures around the world. The webtoon-style illustrations are absolutely beautiful and keep the kids completely absorbed.",
+                name: "Maria González",
+                role: "Mother of 3, Madrid",
+                initial: "M",
+                gradient: "from-pink-500 to-violet-500"
+              },
+              {
+                text: "As an educator, I recommend Mythic Tales to all parents. It's an incredible tool for teaching cultural diversity and universal values. Children learn about tolerance, respect and the richness of different traditions while having fun.",
+                name: "Ana Rodriguez",
+                role: "Elementary Teacher, Barcelona",
+                initial: "A",
+                gradient: "from-cyan-500 to-blue-500"
+              },
+              {
+                text: "My grandparents told me these stories when I was little, and now I can share them with my grandchildren in a modern and engaging way. The artistic and narrative quality is exceptional. It's like having a world library at home.",
+                name: "José Martinez",
+                role: "Grandfather and retired librarian, Seville",
+                initial: "J",
+                gradient: "from-emerald-500 to-teal-500"
+              }
+            ].map((testimonial, index) => (
+              <div key={index} className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-xl p-8 hover:bg-slate-700/50 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 border border-slate-700/50 hover:shadow-2xl">
+                <div className="flex items-start mb-6">
+                  <div className="flex-shrink-0">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current inline-block" />
+                    ))}
+                  </div>
                 </div>
-                <div>
-                  <h4 className="text-white font-semibold">Maria González</h4>
-                  <p className="text-slate-400 text-sm">Mother of 3, Madrid</p>
+                <p className="text-slate-200 mb-8 italic text-lg leading-relaxed group-hover:text-white transition-colors">
+                  "{testimonial.text}"
+                </p>
+                <div className="flex items-center">
+                  <div className={`w-14 h-14 bg-gradient-to-r ${testimonial.gradient} rounded-full flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform`}>
+                    <span className="text-white font-bold text-xl">{testimonial.initial}</span>
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold text-lg group-hover:text-pink-300 transition-colors">{testimonial.name}</h4>
+                    <p className="text-slate-400 group-hover:text-slate-300 transition-colors">{testimonial.role}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="bg-slate-800/40 rounded-lg p-8">
-              <p className="text-slate-300 mb-6 italic">
-                "As an educator, I recommend Mythic Tales to all parents. It's an incredible tool for teaching cultural diversity and universal values. Children learn about tolerance, respect and the richness of different traditions while having fun."
-              </p>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-white font-bold">A</span>
-                </div>
-                <div>
-                  <h4 className="text-white font-semibold">Ana Rodriguez</h4>
-                  <p className="text-slate-400 text-sm">Elementary Teacher, Barcelona</p>
-                </div>
-              </div>
-            </div>
-            <div className="bg-slate-800/40 rounded-lg p-8">
-              <p className="text-slate-300 mb-6 italic">
-                "My grandparents told me these stories when I was little, and now I can share them with my grandchildren in a modern and engaging way. The artistic and narrative quality is exceptional. It's like having a world library at home."
-              </p>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-white font-bold">J</span>
-                </div>
-                <div>
-                  <h4 className="text-white font-semibold">José Martinez</h4>
-                  <p className="text-slate-400 text-sm">Grandfather and retired librarian, Seville</p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -349,40 +364,56 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Why Choose Mythic Tales Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-purple-900/20 to-pink-900/20">
+      {/* Enhanced Why Choose Mythic Tales Section */}
+      <section className="py-24 px-4 bg-gradient-to-r from-purple-900/30 to-pink-900/20">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent mb-8">
-            Why Choose Mythic Tales?
-          </h2>
-          <p className="text-xl text-slate-400 mb-12 max-w-3xl mx-auto">
-            In an increasingly globalized world, preserving and sharing our cultural traditions is more important than ever. Mythic Tales combines the richness of traditional stories with the innovation of modern digital art.
-          </p>
+          <div className="mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-pink-200 to-purple-300 bg-clip-text text-transparent mb-8">
+              Why Choose Mythic Tales?
+            </h2>
+            <div className="w-32 h-1 bg-gradient-to-r from-pink-500 to-violet-500 mx-auto mb-8 rounded-full"></div>
+            <p className="text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+              In an increasingly globalized world, preserving and sharing our cultural traditions is more important than ever. Mythic Tales combines the richness of traditional stories with the innovation of modern digital art.
+            </p>
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-slate-800/40 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-white mb-3">Cultural Authenticity</h3>
-              <p className="text-slate-400 text-sm">
-                Each story is reviewed by cultural experts to ensure historical accuracy and respect for original traditions.
-              </p>
-            </div>
-            <div className="bg-slate-800/40 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-white mb-3">Premium Quality Art</h3>
-              <p className="text-slate-400 text-sm">
-                Professional illustrations in webtoon style that combine traditional techniques with cutting-edge digital technology.
-              </p>
-            </div>
-            <div className="bg-slate-800/40 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-white mb-3">Intercultural Education</h3>
-              <p className="text-slate-400 text-sm">
-                Fosters understanding and appreciation of different cultures, promoting values of tolerance and diversity.
-              </p>
-            </div>
-            <div className="bg-slate-800/40 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-white mb-3">Innovative Technology</h3>
-              <p className="text-slate-400 text-sm">
-                Platform optimized for mobile devices with interactive features and exceptional user experience.
-              </p>
-            </div>
+            {[
+              {
+                icon: Shield,
+                title: "Cultural Authenticity",
+                description: "Each story is reviewed by cultural experts to ensure historical accuracy and respect for original traditions.",
+                gradient: "from-emerald-500 to-teal-500"
+              },
+              {
+                icon: Award,
+                title: "Premium Quality Art",
+                description: "Professional illustrations in webtoon style that combine traditional techniques with cutting-edge digital technology.",
+                gradient: "from-purple-500 to-pink-500"
+              },
+              {
+                icon: Globe,
+                title: "Intercultural Education",
+                description: "Fosters understanding and appreciation of different cultures, promoting values of tolerance and diversity.",
+                gradient: "from-blue-500 to-cyan-500"
+              },
+              {
+                icon: Sparkles,
+                title: "Innovative Technology",
+                description: "Platform optimized for mobile devices with interactive features and exceptional user experience.",
+                gradient: "from-yellow-500 to-orange-500"
+              }
+            ].map((feature, index) => (
+              <div key={index} className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-xl p-8 hover:bg-slate-700/50 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 border border-slate-700/50">
+                <div className={`w-16 h-16 bg-gradient-to-r ${feature.gradient} rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-pink-300 transition-colors">{feature.title}</h3>
+                <p className="text-slate-400 text-lg leading-relaxed group-hover:text-slate-300 transition-colors">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
