@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { BookOpen, Menu, X } from "lucide-react";
+import { BookOpen, Menu, X, Sparkles } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -39,10 +39,21 @@ export const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <div className="flex items-center">
-            <BookOpen className="w-8 h-8 text-pink-400 mr-3" />
-            <span className="text-xl font-bold text-white">Mythic Tales</span>
+          {/* Enhanced Logo */}
+          <div className="flex items-center group cursor-pointer">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-violet-500 rounded-lg blur-sm opacity-50 group-hover:opacity-75 transition-opacity" />
+              <div className="relative bg-slate-800 rounded-lg p-2 border border-slate-700 group-hover:border-pink-400/50 transition-colors">
+                <BookOpen className="w-6 h-6 text-pink-400" />
+                <Sparkles className="w-3 h-3 text-violet-400 absolute -top-1 -right-1 animate-pulse" />
+              </div>
+            </div>
+            <div className="ml-3">
+              <span className="text-xl font-bold bg-gradient-to-r from-white to-pink-200 bg-clip-text text-transparent">
+                Mythic Tales
+              </span>
+              <div className="text-xs text-slate-400 -mt-1">Stories that enchant</div>
+            </div>
           </div>
 
           {/* Desktop Navigation */}

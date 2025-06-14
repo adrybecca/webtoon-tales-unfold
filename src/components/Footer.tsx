@@ -1,5 +1,5 @@
 
-import { BookOpen, Mail, Linkedin, Instagram, Facebook } from "lucide-react";
+import { BookOpen, Mail, Linkedin, Instagram, Facebook, Sparkles } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -7,9 +7,20 @@ export const Footer = () => {
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center mb-4">
-              <BookOpen className="w-8 h-8 text-pink-400 mr-3" />
-              <span className="text-xl font-bold text-white">Mythic Tales</span>
+            <div className="flex items-center mb-4 group">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-violet-500 rounded-lg blur-sm opacity-40 group-hover:opacity-60 transition-opacity" />
+                <div className="relative bg-slate-800 rounded-lg p-2 border border-slate-700">
+                  <BookOpen className="w-8 h-8 text-pink-400" />
+                  <Sparkles className="w-3 h-3 text-violet-400 absolute -top-1 -right-1 animate-pulse" />
+                </div>
+              </div>
+              <div className="ml-3">
+                <span className="text-xl font-bold bg-gradient-to-r from-white to-pink-200 bg-clip-text text-transparent">
+                  Mythic Tales
+                </span>
+                <div className="text-xs text-slate-400 -mt-1">Stories that enchant</div>
+              </div>
             </div>
             <p className="text-slate-400 mb-6 max-w-md">
               Bringing traditional stories and legends from every culture to life through beautiful webtoon-style art. 

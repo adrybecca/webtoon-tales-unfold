@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, BookOpen, Globe } from "lucide-react";
+import { ArrowRight, BookOpen, Globe, Sparkles, Star } from "lucide-react";
 
 export const Hero = () => {
   const handleBrowseStoriesClick = () => {
@@ -21,8 +21,20 @@ export const Hero = () => {
       
       <div className="relative z-10 text-center max-w-4xl mx-auto">
         <div className="flex items-center justify-center mb-6">
-          <Globe className="w-8 h-8 text-pink-400 mr-3" />
-          <span className="text-pink-400 font-semibold text-lg tracking-wide">MYTHIC TALES</span>
+          <div className="relative group">
+            <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-violet-500 to-cyan-500 rounded-full blur-lg opacity-60 group-hover:opacity-80 transition-opacity animate-pulse" />
+            <div className="relative bg-slate-800/50 backdrop-blur-sm rounded-full p-4 border border-slate-700">
+              <Globe className="w-8 h-8 text-pink-400" />
+              <Star className="w-4 h-4 text-yellow-400 absolute -top-1 -right-1 animate-bounce" />
+              <Sparkles className="w-3 h-3 text-violet-400 absolute -bottom-1 -left-1 animate-pulse" />
+            </div>
+          </div>
+          <div className="ml-4">
+            <span className="text-pink-400 font-bold text-2xl tracking-wide bg-gradient-to-r from-pink-400 to-violet-400 bg-clip-text text-transparent">
+              MYTHIC TALES
+            </span>
+            <div className="text-slate-400 text-sm mt-1">Stories that enchant the world</div>
+          </div>
         </div>
         
         <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-pink-200 to-purple-300 bg-clip-text text-transparent mb-6 leading-tight">
