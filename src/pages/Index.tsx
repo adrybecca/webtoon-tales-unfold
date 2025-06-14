@@ -169,10 +169,9 @@ const Index = () => {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Button 
-                variant="outline"
                 size="lg"
                 onClick={handleCreateAccount}
-                className="border-2 border-emerald-400/50 text-emerald-200 hover:bg-emerald-400/10 px-8 py-4 rounded-full font-semibold"
+                className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-indigo-500/25 transition-all duration-300"
               >
                 <Users className="w-5 h-5 mr-2" />
                 Create Family Account
@@ -196,10 +195,9 @@ const Index = () => {
                 <li>• Monthly updates with new stories</li>
               </ul>
               <Button 
-                variant="outline" 
                 size="sm"
                 onClick={handleStartReading}
-                className="w-full border-emerald-400/50 text-emerald-300 hover:bg-emerald-400/10 group-hover:scale-105 transition-transform"
+                className="w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white group-hover:scale-105 transition-transform shadow-lg hover:shadow-emerald-500/25"
               >
                 Browse Library
               </Button>
@@ -220,10 +218,9 @@ const Index = () => {
                 <li>• Related creative activities</li>
               </ul>
               <Button 
-                variant="outline" 
                 size="sm"
                 onClick={() => alert("Educational resources coming soon!")}
-                className="w-full border-purple-400/50 text-purple-300 hover:bg-purple-400/10 group-hover:scale-105 transition-transform"
+                className="w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white group-hover:scale-105 transition-transform shadow-lg hover:shadow-purple-500/25"
               >
                 Explore Tools
               </Button>
@@ -244,10 +241,9 @@ const Index = () => {
                 <li>• Synchronization across devices</li>
               </ul>
               <Button 
-                variant="outline" 
                 size="sm"
                 onClick={handleCreateAccount}
-                className="w-full border-pink-400/50 text-pink-300 hover:bg-pink-400/10 group-hover:scale-105 transition-transform"
+                className="w-full bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white group-hover:scale-105 transition-transform shadow-lg hover:shadow-pink-500/25"
               >
                 Get Started
               </Button>
@@ -277,10 +273,9 @@ const Index = () => {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Button 
-                variant="outline"
                 size="lg"
                 onClick={handleCreateAccount}
-                className="border-2 border-violet-400/50 text-violet-200 hover:bg-violet-400/10 px-8 py-4 rounded-full font-semibold"
+                className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-orange-500/25 transition-all duration-300"
               >
                 <Users className="w-5 h-5 mr-2" />
                 Join Creator Community
@@ -304,10 +299,9 @@ const Index = () => {
                 <li>• Advanced coloring tools</li>
               </ul>
               <Button 
-                variant="outline" 
                 size="sm"
                 onClick={() => alert("Creator tools coming soon!")}
-                className="w-full border-violet-400/50 text-violet-300 hover:bg-violet-400/10 group-hover:scale-105 transition-transform"
+                className="w-full bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-600 hover:to-purple-700 text-white group-hover:scale-105 transition-transform shadow-lg hover:shadow-violet-500/25"
               >
                 Try Tools
               </Button>
@@ -328,10 +322,9 @@ const Index = () => {
                 <li>• Active creator community</li>
               </ul>
               <Button 
-                variant="outline" 
                 size="sm"
                 onClick={() => alert("Mentorship program coming soon!")}
-                className="w-full border-cyan-400/50 text-cyan-300 hover:bg-cyan-400/10 group-hover:scale-105 transition-transform"
+                className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white group-hover:scale-105 transition-transform shadow-lg hover:shadow-cyan-500/25"
               >
                 Find Mentor
               </Button>
@@ -352,10 +345,9 @@ const Index = () => {
                 <li>• Popularity bonuses</li>
               </ul>
               <Button 
-                variant="outline" 
                 size="sm"
                 onClick={handleStartCreating}
-                className="w-full border-emerald-400/50 text-emerald-300 hover:bg-emerald-400/10 group-hover:scale-105 transition-transform"
+                className="w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white group-hover:scale-105 transition-transform shadow-lg hover:shadow-emerald-500/25"
               >
                 Start Earning
               </Button>
