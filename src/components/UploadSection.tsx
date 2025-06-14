@@ -28,24 +28,24 @@ const benefits = [
 
 export const UploadSection = () => {
   return (
-    <section className="py-20 px-4 relative">
+    <section className="py-16 px-4 relative">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-pink-900/20" />
       
-      <div className="max-w-6xl mx-auto relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent mb-4">
+      <div className="max-w-5xl mx-auto relative z-10">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent mb-3">
             Share Your Stories
           </h2>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto mb-8">
+          <p className="text-lg text-slate-400 max-w-xl mx-auto mb-6">
             Are you a storyteller or artist? Join our community and bring traditional tales to life with beautiful webtoon-style art
           </p>
           
           <Button 
             size="lg"
-            className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-emerald-500/25 transition-all duration-300 transform hover:scale-105"
+            className="bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-600 hover:to-purple-700 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-violet-500/25 transition-all duration-300 transform hover:scale-105"
           >
             <Upload className="w-5 h-5 mr-2" />
-            Start Creating
+            Join Creator Community
           </Button>
         </div>
 
@@ -65,11 +65,11 @@ export const UploadSection = () => {
           ))}
         </div>
 
-        <div className="mt-16 bg-gradient-to-r from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/30">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+        <div className="mt-12 bg-gradient-to-r from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/30">
+          <div className="grid md:grid-cols-2 gap-6 items-center">
             <div>
-              <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
-              <p className="text-slate-400 mb-6">
+              <h3 className="text-xl font-bold text-white mb-3">Ready to Get Started?</h3>
+              <p className="text-slate-400 mb-4">
                 Join thousands of creators who are already sharing their cultural heritage through beautiful digital storytelling. 
                 Upload your first story today and connect with families around the world.
               </p>
@@ -91,7 +91,7 @@ export const UploadSection = () => {
             <div className="text-center">
               <Button 
                 size="lg"
-                className="w-full bg-gradient-to-r from-pink-500 to-violet-600 hover:from-pink-600 hover:to-violet-700 text-white py-4 rounded-xl text-lg font-semibold"
+                className="w-full bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white py-4 rounded-xl text-lg font-semibold shadow-lg hover:shadow-orange-500/25 transition-all duration-300 transform hover:scale-105"
               >
                 Create Account & Upload
               </Button>
