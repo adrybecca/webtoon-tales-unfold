@@ -67,20 +67,20 @@ export const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Left Section: Logo and Navigation */}
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center space-x-8">
             {/* Enhanced Logo */}
             <div className="flex items-center group cursor-pointer">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-violet-500 rounded-lg blur-sm opacity-50 group-hover:opacity-75 transition-opacity" />
-                <div className="relative bg-slate-800 rounded-lg p-2 border border-slate-700 group-hover:border-pink-400/50 transition-colors">
-                  <BookOpen className="w-6 h-6 text-pink-400" />
+                <div className="relative bg-slate-800 rounded-lg p-3 border border-slate-700 group-hover:border-pink-400/50 transition-colors">
+                  <BookOpen className="w-7 h-7 text-pink-400" />
                   <Sparkles className="w-3 h-3 text-violet-400 absolute -top-1 -right-1 animate-pulse" />
                 </div>
               </div>
-              <div className="ml-3">
-                <span className="text-xl font-bold bg-gradient-to-r from-white to-pink-200 bg-clip-text text-transparent">
+              <div className="ml-4">
+                <span className="text-2xl font-bold bg-gradient-to-r from-white to-pink-200 bg-clip-text text-transparent">
                   Mythic Tales
                 </span>
                 <div className="text-xs text-slate-400 -mt-1">Stories that enchant</div>
@@ -88,14 +88,14 @@ export const Header = () => {
             </div>
 
             {/* Desktop Navigation Menu */}
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
               <NavigationMenu>
                 <NavigationMenuList>
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="bg-transparent text-white hover:text-pink-400 data-[state=open]:text-pink-400">
+                    <NavigationMenuTrigger className="bg-transparent text-white hover:text-pink-400 data-[state=open]:text-pink-400 text-base px-4 py-2">
                       Site Menu
                     </NavigationMenuTrigger>
-                    <NavigationMenuContent className="bg-slate-800 border-slate-700">
+                    <NavigationMenuContent className="bg-slate-800 border-slate-700 z-50">
                       <div className="grid gap-2 p-4 w-64">
                         {menuItems.map((item) => (
                           <a
@@ -119,11 +119,11 @@ export const Header = () => {
           <div className="hidden md:flex items-center space-x-4">
             {/* Language Selector */}
             <Select value={selectedLanguage} onValueChange={handleLanguageChange}>
-              <SelectTrigger className="w-40 bg-slate-800 border-slate-700 text-white">
+              <SelectTrigger className="w-44 bg-slate-800 border-slate-700 text-white hover:bg-slate-700 transition-colors">
                 <Languages className="w-4 h-4 mr-2" />
                 <SelectValue />
               </SelectTrigger>
-              <SelectContent className="bg-slate-800 border-slate-700">
+              <SelectContent className="bg-slate-800 border-slate-700 z-50">
                 {languages.map((language) => (
                   <SelectItem key={language.code} value={language.code} className="text-white hover:bg-slate-700">
                     <span className="flex items-center">
@@ -138,7 +138,7 @@ export const Header = () => {
             {/* Login Button */}
             <Button
               onClick={handleLoginClick}
-              className="bg-gradient-to-r from-pink-500 to-violet-600 hover:from-pink-600 hover:to-violet-700 text-white"
+              className="bg-gradient-to-r from-pink-500 to-violet-600 hover:from-pink-600 hover:to-violet-700 text-white px-6 py-2"
             >
               <User className="w-4 h-4 mr-2" />
               Login
@@ -152,7 +152,7 @@ export const Header = () => {
               <SelectTrigger className="w-16 bg-slate-800 border-slate-700 text-white">
                 <Languages className="w-4 h-4" />
               </SelectTrigger>
-              <SelectContent className="bg-slate-800 border-slate-700">
+              <SelectContent className="bg-slate-800 border-slate-700 z-50">
                 {languages.map((language) => (
                   <SelectItem key={language.code} value={language.code} className="text-white hover:bg-slate-700">
                     <span className="flex items-center">
@@ -187,7 +187,7 @@ export const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800/95 rounded-lg mt-2">
               {menuItems.map((item) => (
                 <a
