@@ -16,10 +16,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState("en");
+  const { language, setLanguage, t } = useLanguage();
 
   const languages = [
     { code: "en", name: "English", flag: "🇺🇸" },
@@ -31,13 +32,13 @@ export const Header = () => {
   ];
 
   const menuItems = [
-    { title: "Home", href: "#home" },
-    { title: "Featured Stories", href: "#featured" },
-    { title: "Browse by Culture", href: "#cultures" },
-    { title: "Upload Your Tale", href: "/login" },
-    { title: "For Readers", href: "#readers" },
-    { title: "For Creators", href: "#creators" },
-    { title: "Contact", href: "#contact" },
+    { title: t('home'), href: "#home" },
+    { title: t('featured_stories'), href: "#featured" },
+    { title: t('browse_by_culture'), href: "#cultures" },
+    { title: t('upload_your_tale'), href: "/login" },
+    { title: t('for_readers'), href: "#readers" },
+    { title: t('for_creators'), href: "#creators" },
+    { title: t('contact'), href: "#contact" },
   ];
 
   const handleNavClick = (href: string, event: React.MouseEvent) => {
@@ -60,7 +61,7 @@ export const Header = () => {
   };
 
   const handleLanguageChange = (languageCode: string) => {
-    setSelectedLanguage(languageCode);
+    setLanguage(languageCode as any);
     console.log(`Language changed to: ${languageCode}`);
   };
 
@@ -85,9 +86,9 @@ export const Header = () => {
               </div>
               <div className="ml-3">
                 <span className="text-xl font-bold bg-gradient-to-r from-white to-pink-200 bg-clip-text text-transparent">
-                  Mythic Tales
+                  {t('mythic_tales')}
                 </span>
-                <div className="text-xs text-slate-400 -mt-1">Stories that enchant</div>
+                <div className="text-xs text-slate-400 -mt-1">{t('stories_that_enchant')}</div>
               </div>
             </div>
 
@@ -97,7 +98,7 @@ export const Header = () => {
                 <NavigationMenuList>
                   <NavigationMenuItem>
                     <NavigationMenuTrigger className="bg-transparent text-white hover:text-pink-400 data-[state=open]:text-pink-400 text-sm px-3 py-1">
-                      Site Menu
+                      {t('site_menu')}
                     </NavigationMenuTrigger>
                     <NavigationMenuContent className="bg-slate-800 border-slate-700 z-50">
                       <div className="grid gap-2 p-4 w-64">
@@ -122,17 +123,17 @@ export const Header = () => {
           {/* Right Section: Language and Login Controls */}
           <div className="hidden md:flex items-center space-x-3">
             {/* Language Selector */}
-            <Select value={selectedLanguage} onValueChange={handleLanguageChange}>
+            <Select value={language} onValueChange={handleLanguageChange}>
               <SelectTrigger className="w-36 bg-slate-800 border-slate-700 text-white hover:bg-slate-700 transition-colors text-sm">
                 <Languages className="w-4 h-4 mr-2" />
                 <SelectValue />
               </SelectTrigger>
               <SelectContent className="bg-slate-800 border-slate-700 z-50">
-                {languages.map((language) => (
-                  <SelectItem key={language.code} value={language.code} className="text-white hover:bg-slate-700">
+                {languages.map((lang) => (
+                  <SelectItem key={lang.code} value={lang.code} className="text-white hover:bg-slate-700">
                     <span className="flex items-center">
-                      <span className="mr-2">{language.flag}</span>
-                      {language.name}
+                      <span className="mr-2">{lang.flag}</span>
+                      {lang.name}
                     </span>
                   </SelectItem>
                 ))}
@@ -145,23 +146,23 @@ export const Header = () => {
               className="bg-gradient-to-r from-pink-500 to-violet-600 hover:from-pink-600 hover:to-violet-700 text-white px-4 py-2 text-sm"
             >
               <User className="w-4 h-4 mr-2" />
-              Login
+              {t('login')}
             </Button>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
             {/* Mobile Language Selector */}
-            <Select value={selectedLanguage} onValueChange={handleLanguageChange}>
+            <Select value={language} onValueChange={handleLanguageChange}>
               <SelectTrigger className="w-14 bg-slate-800 border-slate-700 text-white">
                 <Languages className="w-4 h-4" />
               </SelectTrigger>
               <SelectContent className="bg-slate-800 border-slate-700 z-50">
-                {languages.map((language) => (
-                  <SelectItem key={language.code} value={language.code} className="text-white hover:bg-slate-700">
+                {languages.map((lang) => (
+                  <SelectItem key={lang.code} value={lang.code} className="text-white hover:bg-slate-700">
                     <span className="flex items-center">
-                      <span className="mr-2">{language.flag}</span>
-                      {language.name}
+                      <span className="mr-2">{lang.flag}</span>
+                      {lang.name}
                     </span>
                   </SelectItem>
                 ))}
