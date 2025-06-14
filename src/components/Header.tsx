@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { BookOpen, Menu, X, Sparkles } from "lucide-react";
+import { BookOpen, Menu, X, Sparkles, User, Languages } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -9,9 +9,26 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState("en");
+
+  const languages = [
+    { code: "en", name: "English", flag: "🇺🇸" },
+    { code: "es", name: "Español", flag: "🇪🇸" },
+    { code: "fr", name: "Français", flag: "🇫🇷" },
+    { code: "de", name: "Deutsch", flag: "🇩🇪" },
+    { code: "it", name: "Italiano", flag: "🇮🇹" },
+    { code: "el", name: "Ελληνικά", flag: "🇬🇷" },
+  ];
 
   const menuItems = [
     { title: "Home", href: "#home" },
@@ -35,6 +52,18 @@ export const Header = () => {
     setIsMobileMenuOpen(false);
   };
 
+  const handleLanguageChange = (languageCode: string) => {
+    setSelectedLanguage(languageCode);
+    console.log(`Language changed to: ${languageCode}`);
+    // Here you would implement the actual language switching logic
+  };
+
+  const handleLoginClick = () => {
+    console.log("Login clicked - Supabase integration needed");
+    // This would connect to your authentication system
+    alert("Please connect Supabase for authentication functionality");
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,8 +85,9 @@ export const Header = () => {
             </div>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:block">
+          {/* Desktop Navigation and Controls */}
+          <div className="hidden md:flex items-center space-x-4">
+            {/* Navigation Menu */}
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
@@ -81,10 +111,64 @@ export const Header = () => {
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
+
+            {/* Language Selector */}
+            <Select value={selectedLanguage} onValueChange={handleLanguageChange}>
+              <SelectTrigger className="w-40 bg-slate-800 border-slate-700 text-white">
+                <Languages className="w-4 h-4 mr-2" />
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent className="bg-slate-800 border-slate-700">
+                {languages.map((language) => (
+                  <SelectItem key={language.code} value={language.code} className="text-white hover:bg-slate-700">
+                    <span className="flex items-center">
+                      <span className="mr-2">{language.flag}</span>
+                      {language.name}
+                    </span>
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+
+            {/* Login Button */}
+            <Button
+              onClick={handleLoginClick}
+              className="bg-gradient-to-r from-pink-500 to-violet-600 hover:from-pink-600 hover:to-violet-700 text-white"
+            >
+              <User className="w-4 h-4 mr-2" />
+              Login
+            </Button>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-2">
+            {/* Mobile Language Selector */}
+            <Select value={selectedLanguage} onValueChange={handleLanguageChange}>
+              <SelectTrigger className="w-16 bg-slate-800 border-slate-700 text-white">
+                <Languages className="w-4 h-4" />
+              </SelectTrigger>
+              <SelectContent className="bg-slate-800 border-slate-700">
+                {languages.map((language) => (
+                  <SelectItem key={language.code} value={language.code} className="text-white hover:bg-slate-700">
+                    <span className="flex items-center">
+                      <span className="mr-2">{language.flag}</span>
+                      {language.name}
+                    </span>
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+
+            {/* Mobile Login Button */}
+            <Button
+              onClick={handleLoginClick}
+              size="sm"
+              className="bg-gradient-to-r from-pink-500 to-violet-600 hover:from-pink-600 hover:to-violet-700 text-white"
+            >
+              <User className="w-4 h-4" />
+            </Button>
+
+            {/* Mobile Menu Toggle */}
             <Button
               variant="ghost"
               size="sm"
