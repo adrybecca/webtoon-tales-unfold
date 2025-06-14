@@ -34,7 +34,7 @@ const stories = [
     price: "$4.49",
     rating: 4.7,
     reviews: 203,
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=400&h=300&fit=crop",
     description: "The legend of Quetzalcoatl comes to life",
     genre: "Legend"
   },
@@ -56,7 +56,7 @@ const stories = [
     price: "$2.99",
     rating: 4.8,
     reviews: 94,
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=400&h=300&fit=crop",
     description: "The clever spider's greatest adventures",
     genre: "Folklore"
   },
@@ -67,7 +67,7 @@ const stories = [
     price: "$4.99",
     rating: 4.9,
     reviews: 167,
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=400&h=300&fit=crop",
     description: "A tale of love conquering the coldest winter",
     genre: "Fairy Tale"
   }

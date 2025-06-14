@@ -1,5 +1,5 @@
 
-import { BookOpen, Mail, Twitter, Instagram, Facebook } from "lucide-react";
+import { BookOpen, Mail, Linkedin, Instagram, Facebook } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -17,7 +17,7 @@ export const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-slate-400 hover:text-pink-400 transition-colors">
-                <Twitter className="w-5 h-5" />
+                <Linkedin className="w-5 h-5" />
               </a>
               <a href="#" className="text-slate-400 hover:text-pink-400 transition-colors">
                 <Instagram className="w-5 h-5" />

@@ -3,6 +3,13 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, BookOpen, Globe } from "lucide-react";
 
 export const Hero = () => {
+  const handleBrowseStoriesClick = () => {
+    const featuredSection = document.getElementById('featured');
+    if (featuredSection) {
+      featuredSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden pt-16">
       {/* Background gradient overlay */}
@@ -33,6 +40,7 @@ export const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button 
             size="lg" 
+            onClick={handleBrowseStoriesClick}
             className="bg-gradient-to-r from-pink-500 to-violet-600 hover:from-pink-600 hover:to-violet-700 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-pink-500/25 transition-all duration-300 transform hover:scale-105"
           >
             <BookOpen className="w-5 h-5 mr-2" />
@@ -43,6 +51,12 @@ export const Hero = () => {
           <Button 
             variant="outline" 
             size="lg"
+            onClick={() => {
+              const uploadSection = document.getElementById('upload');
+              if (uploadSection) {
+                uploadSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
             className="border-2 border-pink-400/50 text-pink-200 hover:bg-pink-400/10 px-8 py-4 rounded-full text-lg font-semibold backdrop-blur-sm"
           >
             Upload Your Tale
