@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -90,7 +89,7 @@ const allStories = [
     price: "$4.29",
     rating: 4.7,
     reviews: 134,
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1501286353178-1ec881214838?w=400&h=300&fit=crop",
     description: "A tale of beauty, wisdom and divine intervention",
     genre: "Hindu Mythology"
   },
@@ -101,7 +100,7 @@ const allStories = [
     price: "$3.99",
     rating: 4.6,
     reviews: 112,
-    image: "https://images.unsplash.com/photo-1539650116574-75c0c6d8ab80?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1466721591366-2d5fba72006d?w=400&h=300&fit=crop",
     description: "Ancient Egyptian mystery and wisdom",
     genre: "Ancient Mythology"
   }
