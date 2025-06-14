@@ -10,8 +10,12 @@ export const Hero = () => {
     }
   };
 
+  const handleUploadStoryClick = () => {
+    alert("Redirecting to login page - authentication will be implemented soon!");
+  };
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden pt-24">
+    <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden pt-20">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/50 via-purple-800/30 to-pink-700/20" />
       
@@ -67,12 +71,7 @@ export const Hero = () => {
           <Button 
             variant="outline" 
             size="lg"
-            onClick={() => {
-              const uploadSection = document.getElementById('upload');
-              if (uploadSection) {
-                uploadSection.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
+            onClick={handleUploadStoryClick}
             className="border-2 border-pink-400/50 text-pink-200 hover:bg-pink-400/10 px-10 py-5 rounded-full text-xl font-semibold backdrop-blur-sm"
           >
             Upload Your Story

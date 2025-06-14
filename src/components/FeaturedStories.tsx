@@ -1,10 +1,11 @@
 
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star, ShoppingCart, Eye } from "lucide-react";
 
-const stories = [
+const allStories = [
   {
     id: 1,
     title: "The Dragon of Mount Fuji",
@@ -70,10 +71,46 @@ const stories = [
     image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=400&h=300&fit=crop",
     description: "A tale of love conquering the coldest winter",
     genre: "Fairy Tale"
+  },
+  {
+    id: 7,
+    title: "The Thunder Bird",
+    country: "Canada",
+    price: "$3.49",
+    rating: 4.5,
+    reviews: 78,
+    image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=300&fit=crop",
+    description: "First Nations legend of the mighty Thunder Bird",
+    genre: "Native Legend"
+  },
+  {
+    id: 8,
+    title: "The Golden Peacock",
+    country: "India",
+    price: "$4.29",
+    rating: 4.7,
+    reviews: 134,
+    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop",
+    description: "A tale of beauty, wisdom and divine intervention",
+    genre: "Hindu Mythology"
+  },
+  {
+    id: 9,
+    title: "The Sphinx's Riddle",
+    country: "Egypt",
+    price: "$3.99",
+    rating: 4.6,
+    reviews: 112,
+    image: "https://images.unsplash.com/photo-1539650116574-75c0c6d8ab80?w=400&h=300&fit=crop",
+    description: "Ancient Egyptian mystery and wisdom",
+    genre: "Ancient Mythology"
   }
 ];
 
 export const FeaturedStories = () => {
+  const [showAll, setShowAll] = useState(false);
+  const displayedStories = showAll ? allStories : allStories.slice(0, 6);
+
   return (
     <section className="py-20 px-4 relative">
       <div className="max-w-7xl mx-auto">
@@ -90,7 +127,7 @@ export const FeaturedStories = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {stories.map((story) => (
+          {displayedStories.map((story) => (
             <Card key={story.id} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border-slate-700/50 backdrop-blur-sm hover:shadow-2xl hover:shadow-pink-500/10 transition-all duration-300 transform hover:-translate-y-2 group">
               <div className="relative overflow-hidden rounded-t-lg">
                 <img 
@@ -135,6 +172,7 @@ export const FeaturedStories = () => {
                   <Button 
                     className="flex-1 bg-gradient-to-r from-pink-500 to-violet-600 hover:from-pink-600 hover:to-violet-700 text-white"
                     size="sm"
+                    onClick={() => alert("Purchase functionality will be implemented soon!")}
                   >
                     <ShoppingCart className="w-4 h-4 mr-2" />
                     Buy Now
@@ -143,6 +181,7 @@ export const FeaturedStories = () => {
                     variant="outline"
                     size="sm"
                     className="border-slate-600 text-slate-300 hover:bg-slate-700"
+                    onClick={() => alert("Preview functionality will be implemented soon!")}
                   >
                     <Eye className="w-4 h-4" />
                   </Button>
@@ -155,9 +194,10 @@ export const FeaturedStories = () => {
         <div className="text-center mt-12">
           <Button 
             size="lg"
+            onClick={() => setShowAll(!showAll)}
             className="bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-600 hover:to-purple-700 text-white px-8 py-4 rounded-full"
           >
-            View All Stories
+            {showAll ? "Show Less" : "View All Stories"}
           </Button>
         </div>
       </div>
