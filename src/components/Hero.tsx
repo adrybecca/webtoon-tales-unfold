@@ -1,8 +1,11 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, BookOpen, Globe, Sparkles, Star } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Hero = () => {
+  const { t } = useLanguage();
+
   const handleBrowseStoriesClick = () => {
     const featuredSection = document.getElementById('featured');
     if (featuredSection) {
@@ -38,26 +41,26 @@ export const Hero = () => {
           </div>
           <div className="ml-4">
             <span className="text-pink-400 font-bold text-xl tracking-wide bg-gradient-to-r from-pink-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent">
-              MYTHIC TALES
+              {t('mythic_tales').toUpperCase()}
             </span>
-            <div className="text-slate-300 text-xs mt-1 font-medium">Stories that enchant the world</div>
+            <div className="text-slate-300 text-xs mt-1 font-medium">{t('stories_that_enchant')}</div>
           </div>
         </div>
         
         <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-white via-pink-200 to-purple-300 bg-clip-text text-transparent mb-4 leading-tight animate-fade-in delay-300">
-          Legendary Tales
+          {t('legendary_tales')}
           <br />
           <span className="text-2xl md:text-3xl bg-gradient-to-r from-pink-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent animate-pulse">
-            From Every Corner of the World
+            {t('from_every_corner')}
           </span>
         </h1>
         
         <p className="text-base md:text-lg text-slate-200 mb-4 max-w-3xl mx-auto leading-relaxed font-light animate-fade-in delay-500">
-          Discover enchanting stories and legends from all cultures of the world, beautifully illustrated in modern webtoon style for the next generation of readers
+          {t('discover_enchanting_stories')}
         </p>
         
         <p className="text-sm text-slate-300 mb-6 max-w-2xl mx-auto leading-relaxed animate-fade-in delay-700">
-          More than 150 traditional tales, fascinating myths and authentic folklore from 50+ countries, carefully adapted for modern families seeking to connect with their cultural heritage and explore global diversity.
+          {t('more_than_150_tales')}
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 animate-fade-in delay-1000">
@@ -67,7 +70,7 @@ export const Hero = () => {
             className="bg-gradient-to-r from-pink-500 to-violet-600 hover:from-pink-600 hover:to-violet-700 text-white px-6 py-3 rounded-full text-base font-semibold shadow-xl hover:shadow-pink-500/30 transition-all duration-300 transform hover:scale-105"
           >
             <BookOpen className="w-4 h-4 mr-2" />
-            Explore Stories
+            {t('explore_stories')}
             <ArrowRight className="w-4 h-4 ml-2" />
           </Button>
           
@@ -76,31 +79,31 @@ export const Hero = () => {
             onClick={handleUploadStoryClick}
             className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-6 py-3 rounded-full text-base font-semibold shadow-xl hover:shadow-emerald-500/30 transition-all duration-300 transform hover:scale-105"
           >
-            Upload Your Story
+            {t('upload_your_story')}
           </Button>
         </div>
         
         <div className="flex items-center justify-center space-x-8 text-slate-300 mb-10 animate-fade-in delay-1200">
           <div className="text-center group cursor-pointer transform hover:scale-105 transition-all duration-300">
             <div className="text-2xl font-bold text-white bg-gradient-to-r from-pink-400 to-violet-400 bg-clip-text text-transparent group-hover:from-pink-300 group-hover:to-violet-300">150+</div>
-            <div className="text-xs group-hover:text-slate-200 transition-colors">Available Stories</div>
+            <div className="text-xs group-hover:text-slate-200 transition-colors">{t('available_stories')}</div>
           </div>
           <div className="w-px h-6 bg-gradient-to-b from-transparent via-slate-500 to-transparent" />
           <div className="text-center group cursor-pointer transform hover:scale-105 transition-all duration-300">
             <div className="text-2xl font-bold text-white bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent group-hover:from-cyan-300 group-hover:to-blue-300">50+</div>
-            <div className="text-xs group-hover:text-slate-200 transition-colors">Countries Represented</div>
+            <div className="text-xs group-hover:text-slate-200 transition-colors">{t('countries_represented')}</div>
           </div>
           <div className="w-px h-6 bg-gradient-to-b from-transparent via-slate-500 to-transparent" />
           <div className="text-center group cursor-pointer transform hover:scale-105 transition-all duration-300">
             <div className="text-2xl font-bold text-white bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent group-hover:from-emerald-300 group-hover:to-teal-300">10K+</div>
-            <div className="text-xs group-hover:text-slate-200 transition-colors">Happy Families</div>
+            <div className="text-xs group-hover:text-slate-200 transition-colors">{t('happy_families')}</div>
           </div>
         </div>
         
         <div className="text-center animate-fade-in delay-1500">
-          <h3 className="text-xl font-bold bg-gradient-to-r from-white to-slate-200 bg-clip-text text-transparent mb-3">Connect with Your Cultural Heritage</h3>
+          <h3 className="text-xl font-bold bg-gradient-to-r from-white to-slate-200 bg-clip-text text-transparent mb-3">{t('connect_cultural_heritage')}</h3>
           <p className="text-slate-300 max-w-xl mx-auto text-sm leading-relaxed">
-            From Japanese dragons to Nordic princesses, from African warriors to ancestral American spirits, each story is a window into the cultural richness of our diverse world.
+            {t('cultural_richness_description')}
           </p>
         </div>
       </div>

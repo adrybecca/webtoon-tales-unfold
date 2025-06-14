@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 type Language = 'en' | 'es' | 'fr' | 'de' | 'it' | 'el';
@@ -27,6 +26,18 @@ const translations = {
     'site_menu': 'Site Menu',
     
     // Hero section
+    'legendary_tales': 'Legendary Tales',
+    'from_every_corner': 'From Every Corner of the World',
+    'discover_enchanting_stories': 'Discover enchanting stories and legends from all cultures of the world, beautifully illustrated in modern webtoon style for the next generation of readers',
+    'more_than_150_tales': 'More than 150 traditional tales, fascinating myths and authentic folklore from 50+ countries, carefully adapted for modern families seeking to connect with their cultural heritage and explore global diversity.',
+    'explore_stories': 'Explore Stories',
+    'upload_your_story': 'Upload Your Story',
+    'available_stories': 'Available Stories',
+    'countries_represented': 'Countries Represented',
+    'happy_families': 'Happy Families',
+    'connect_cultural_heritage': 'Connect with Your Cultural Heritage',
+    'cultural_richness_description': 'From Japanese dragons to Nordic princesses, from African warriors to ancestral American spirits, each story is a window into the cultural richness of our diverse world.',
+    
     'discover_timeless_stories': 'Discover Timeless Stories from Around the World',
     'hero_description': 'Immerse yourself in a magical collection of myths, legends and folktales from every corner of the planet. Each story is a window into ancient cultures and universal wisdom.',
     'start_reading': 'Start Reading',
@@ -91,6 +102,23 @@ const translations = {
     'innovative_technology': 'Innovative Technology',
     'technology_description': 'Platform optimized for mobile devices with interactive features and exceptional user experience.',
     
+    // Upload Section
+    'share_your_stories': 'Share Your Stories',
+    'upload_description': 'Do you have a traditional story from your culture that you\'d like to share? We\'d love to help you bring it to life in our webtoon format.',
+    'ready_to_get_started': 'Ready to Get Started?',
+    'contact_us': 'Contact Us',
+    
+    // Footer
+    'bringing_traditional_stories': 'Bringing traditional stories and legends from every culture to life through beautiful webtoon-style art. Perfect for modern families who want to connect with their heritage.',
+    'browse_stories': 'Browse Stories',
+    'gift_cards': 'Gift Cards',
+    'reading_lists': 'Reading Lists',
+    'family_accounts': 'Family Accounts',
+    'art_guidelines': 'Art Guidelines',
+    'creator_support': 'Creator Support',
+    'revenue_info': 'Revenue Info',
+    'all_rights_reserved': 'All rights reserved. Bringing cultures together through storytelling.',
+    
     // Common
     'asia': 'Asia',
     'europe': 'Europe',
@@ -114,6 +142,18 @@ const translations = {
     'site_menu': 'Menú del Sitio',
     
     // Hero section
+    'legendary_tales': 'Cuentos Legendarios',
+    'from_every_corner': 'De Cada Rincón del Mundo',
+    'discover_enchanting_stories': 'Descubre historias y leyendas encantadoras de todas las culturas del mundo, bellamente ilustradas en estilo webtoon moderno para la próxima generación de lectores',
+    'more_than_150_tales': 'Más de 150 cuentos tradicionales, mitos fascinantes y folclore auténtico de más de 50 países, cuidadosamente adaptados para familias modernas que buscan conectar con su herencia cultural y explorar la diversidad global.',
+    'explore_stories': 'Explorar Historias',
+    'upload_your_story': 'Subir tu Historia',
+    'available_stories': 'Historias Disponibles',
+    'countries_represented': 'Países Representados',
+    'happy_families': 'Familias Felices',
+    'connect_cultural_heritage': 'Conecta con tu Herencia Cultural',
+    'cultural_richness_description': 'Desde dragones japoneses hasta princesas nórdicas, desde guerreros africanos hasta espíritus ancestrales americanos, cada historia es una ventana a la riqueza cultural de nuestro mundo diverso.',
+    
     'discover_timeless_stories': 'Descubre Historias Atemporales de Todo el Mundo',
     'hero_description': 'Sumérgete en una colección mágica de mitos, leyendas y cuentos populares de cada rincón del planeta. Cada historia es una ventana a culturas ancestrales y sabiduría universal.',
     'start_reading': 'Comenzar a Leer',
@@ -178,6 +218,23 @@ const translations = {
     'innovative_technology': 'Tecnología Innovadora',
     'technology_description': 'Plataforma optimizada para dispositivos móviles con características interactivas y experiencia de usuario excepcional.',
     
+    // Upload Section
+    'share_your_stories': 'Comparte tus Historias',
+    'upload_description': '¿Tienes una historia tradicional de tu cultura que te gustaría compartir? Nos encantaría ayudarte a darle vida en nuestro formato webtoon.',
+    'ready_to_get_started': '¿Listo para Comenzar?',
+    'contact_us': 'Contáctanos',
+    
+    // Footer
+    'bringing_traditional_stories': 'Dando vida a historias y leyendas tradicionales de cada cultura a través de hermoso arte estilo webtoon. Perfecto para familias modernas que quieren conectar con su herencia.',
+    'browse_stories': 'Explorar Historias',
+    'gift_cards': 'Tarjetas Regalo',
+    'reading_lists': 'Listas de Lectura',
+    'family_accounts': 'Cuentas Familiares',
+    'art_guidelines': 'Guías de Arte',
+    'creator_support': 'Apoyo al Creador',
+    'revenue_info': 'Información de Ingresos',
+    'all_rights_reserved': 'Todos los derechos reservados. Uniendo culturas a través de la narrativa.',
+    
     // Common
     'asia': 'Asia',
     'europe': 'Europa',
@@ -201,6 +258,18 @@ const translations = {
     'site_menu': 'Menu du Site',
     
     // Hero section
+    'legendary_tales': 'Contes Légendaires',
+    'from_every_corner': 'De Chaque Coin du Monde',
+    'discover_enchanting_stories': 'Découvrez des histoires et légendes enchanteresses de toutes les cultures du monde, magnifiquement illustrées dans un style webtoon moderne pour la prochaine génération de lecteurs',
+    'more_than_150_tales': 'Plus de 150 contes traditionnels, mythes fascinants et folklore authentique de plus de 50 pays, soigneusement adaptés pour les familles modernes cherchant à se connecter avec leur héritage culturel et explorer la diversité mondiale.',
+    'explore_stories': 'Explorer les Histoires',
+    'upload_your_story': 'Télécharger votre Histoire',
+    'available_stories': 'Histoires Disponibles',
+    'countries_represented': 'Pays Représentés',
+    'happy_families': 'Familles Heureuses',
+    'connect_cultural_heritage': 'Connectez-vous avec votre Héritage Culturel',
+    'cultural_richness_description': 'Des dragons japonais aux princesses nordiques, des guerriers africains aux esprits ancestraux américains, chaque histoire est une fenêtre sur la richesse culturelle de notre monde diversifié.',
+    
     'discover_timeless_stories': 'Découvrez des Histoires Intemporelles du Monde Entier',
     'hero_description': 'Plongez-vous dans une collection magique de mythes, légendes et contes populaires de chaque coin de la planète. Chaque histoire est une fenêtre sur les cultures ancestrales et la sagesse universelle.',
     'start_reading': 'Commencer à Lire',
@@ -265,6 +334,23 @@ const translations = {
     'innovative_technology': 'Technologie Innovante',
     'technology_description': 'Plateforme optimisée pour les appareils mobiles avec des fonctionnalités interactives et une expérience utilisateur exceptionnelle.',
     
+    // Upload Section
+    'share_your_stories': 'Partagez vos Histoires',
+    'upload_description': 'Avez-vous une histoire traditionnelle de votre culture que vous aimeriez partager? Nous serions ravis de vous aider à la donner vie dans notre format webtoon.',
+    'ready_to_get_started': 'Prêt à Commencer?',
+    'contact_us': 'Contactez-nous',
+    
+    // Footer
+    'bringing_traditional_stories': 'Donner vie aux histoires et légendes traditionnelles de chaque culture grâce à un magnifique art de style webtoon. Parfait pour les familles modernes qui veulent se connecter avec leur héritage.',
+    'browse_stories': 'Parcourir les Histoires',
+    'gift_cards': 'Cartes Cadeaux',
+    'reading_lists': 'Listes de Lecture',
+    'family_accounts': 'Comptes Familiaux',
+    'art_guidelines': 'Directives Artistiques',
+    'creator_support': 'Support Créateur',
+    'revenue_info': 'Info Revenus',
+    'all_rights_reserved': 'Tous droits réservés. Rassembler les cultures à travers la narration.',
+    
     // Common
     'asia': 'Asie',
     'europe': 'Europe',
@@ -288,6 +374,18 @@ const translations = {
     'site_menu': 'Seitenmenü',
     
     // Hero section
+    'legendary_tales': 'Legendäre Geschichten',
+    'from_every_corner': 'Aus jeder Ecke der Welt',
+    'discover_enchanting_stories': 'Entdecken Sie bezaubernde Geschichten und Legenden aus allen Kulturen der Welt, wunderschön illustriert im modernen Webtoon-Stil für die nächste Generation von Lesern',
+    'more_than_150_tales': 'Mehr als 150 traditionelle Geschichten, faszinierende Mythen und authentische Folklore aus über 50 Ländern, sorgfältig für moderne Familien angepasst, die sich mit ihrem kulturellen Erbe verbinden und globale Vielfalt erkunden möchten.',
+    'explore_stories': 'Geschichten erkunden',
+    'upload_your_story': 'Ihre Geschichte hochladen',
+    'available_stories': 'Verfügbare Geschichten',
+    'countries_represented': 'Vertretene Länder',
+    'happy_families': 'Glückliche Familien',
+    'connect_cultural_heritage': 'Verbinden Sie sich mit Ihrem kulturellen Erbe',
+    'cultural_richness_description': 'Von japanischen Drachen bis zu nordischen Prinzessinnen, von afrikanischen Kriegern bis zu amerikanischen Ahnengeistern, jede Geschichte ist ein Fenster in den kulturellen Reichtum unserer vielfältigen Welt.',
+    
     'discover_timeless_stories': 'Entdecken Sie zeitlose Geschichten aus aller Welt',
     'hero_description': 'Tauchen Sie ein in eine magische Sammlung von Mythen, Legenden und Volksmärchen aus allen Ecken des Planeten. Jede Geschichte ist ein Fenster zu alten Kulturen und universeller Weisheit.',
     'start_reading': 'Mit dem Lesen beginnen',
@@ -298,7 +396,7 @@ const translations = {
     'culture_description': 'Tauchen Sie ein in ein reiches Geflecht von Erzähltraditionen aus aller Welt.',
     'asia_description': 'Drachen, Samurai und Ahnenwissen',
     'europe_description': 'Feen, Ritter und verzauberte Schlösser',
-    'africa_description': 'Naturgeister und mutige Helden',
+    'africa_description': 'Natur',
     'americas_description': 'Alte Götter und epische Abenteuer',
     'oceania_description': 'Ahnenträume und Schöpfungsmythen',
     'middle_east_description': 'Magische Genies und Märchen aus Tausendundeiner Nacht',
@@ -352,6 +450,23 @@ const translations = {
     'innovative_technology': 'Innovative Technologie',
     'technology_description': 'Plattform optimiert für mobile Geräte mit interaktiven Funktionen und außergewöhnlicher Benutzererfahrung.',
     
+    // Upload Section
+    'share_your_stories': 'Teilen Sie Ihre Geschichten',
+    'upload_description': 'Haben Sie eine traditionelle Geschichte aus Ihrer Kultur, die Sie gerne teilen möchten? Wir würden Ihnen gerne helfen, sie in unserem Webtoon-Format zum Leben zu erwecken.',
+    'ready_to_get_started': 'Bereit anzufangen?',
+    'contact_us': 'Kontaktieren Sie uns',
+    
+    // Footer
+    'bringing_traditional_stories': 'Traditionelle Geschichten und Legenden jeder Kultur durch wunderschöne Webtoon-Kunst zum Leben erwecken. Perfekt für moderne Familien, die sich mit ihrem Erbe verbinden möchten.',
+    'browse_stories': 'Geschichten durchsuchen',
+    'gift_cards': 'Geschenkkarten',
+    'reading_lists': 'Leselisten',
+    'family_accounts': 'Familienkonten',
+    'art_guidelines': 'Kunstrichtlinien',
+    'creator_support': 'Ersteller-Support',
+    'revenue_info': 'Einnahmen-Info',
+    'all_rights_reserved': 'Alle Rechte vorbehalten. Kulturen durch Geschichtenerzählen verbinden.',
+    
     // Common
     'asia': 'Asien',
     'europe': 'Europa',
@@ -375,6 +490,18 @@ const translations = {
     'site_menu': 'Menu del Sito',
     
     // Hero section
+    'legendary_tales': 'Racconti Leggendari',
+    'from_every_corner': 'Da Ogni Angolo del Mondo',
+    'discover_enchanting_stories': 'Scopri storie e leggende incantevoli da tutte le culture del mondo, magnificamente illustrate in stile webtoon moderno per la prossima generazione di lettori',
+    'more_than_150_tales': 'Più di 150 racconti tradizionali, miti affascinanti e folklore autentico da oltre 50 paesi, accuratamente adattati per famiglie moderne che cercano di connettersi con la loro eredità culturale ed esplorare la diversità globale.',
+    'explore_stories': 'Esplora Storie',
+    'upload_your_story': 'Carica la tua Storia',
+    'available_stories': 'Storie Disponibili',
+    'countries_represented': 'Paesi Rappresentati',
+    'happy_families': 'Famiglie Felici',
+    'connect_cultural_heritage': 'Connettiti con la tua Eredità Culturale',
+    'cultural_richness_description': 'Dai draghi giapponesi alle principesse nordiche, dai guerrieri africani agli spiriti ancestrali americani, ogni storia è una finestra sulla ricchezza culturale del nostro mondo diversificato.',
+    
     'discover_timeless_stories': 'Scopri Storie Senza Tempo da Tutto il Mondo',
     'hero_description': 'Immergiti in una collezione magica di miti, leggende e racconti popolari da ogni angolo del pianeta. Ogni storia è una finestra su culture ancestrali e saggezza universale.',
     'start_reading': 'Inizia a Leggere',
@@ -394,7 +521,7 @@ const translations = {
     // Testimonials
     'what_families_say': 'Cosa Dicono le Nostre Famiglie',
     'testimonial_1': 'Racconti Mitici ha trasformato l\'ora delle storie nella nostra famiglia. I miei figli ora conoscono storie dei loro nonni e di culture di tutto il mondo.',
-    'testimonial_2': 'Come educatrice, raccomando Racconti Mit',
+    'testimonial_2': 'Come educatrice, raccomando Racconti Mitici a tutti i genitori. È uno strumento incredibile per insegnare diversità culturale e valori universali.',
     'testimonial_3': 'I miei nonni mi raccontavano queste storie quando ero piccolo, e ora posso condividerle con i miei nipoti in modo moderno.',
     
     // For Readers
@@ -439,6 +566,23 @@ const translations = {
     'innovative_technology': 'Tecnologia Innovativa',
     'technology_description': 'Piattaforma ottimizzata per dispositivi mobili con caratteristiche interattive ed esperienza utente eccezionale.',
     
+    // Upload Section
+    'share_your_stories': 'Condividi le tue Storie',
+    'upload_description': 'Hai una storia tradizionale della tua cultura che vorresti condividere? Ci piacerebbe aiutarti a darle vita nel nostro formato webtoon.',
+    'ready_to_get_started': 'Pronto per Iniziare?',
+    'contact_us': 'Contattaci',
+    
+    // Footer
+    'bringing_traditional_stories': 'Portare in vita storie e leggende tradizionali di ogni cultura attraverso una splendida arte in stile webtoon. Perfetto per famiglie moderne che vogliono connettersi con la loro eredità.',
+    'browse_stories': 'Sfoglia Storie',
+    'gift_cards': 'Carte Regalo',
+    'reading_lists': 'Liste di Lettura',
+    'family_accounts': 'Account Familiari',
+    'art_guidelines': 'Linee Guida Artistiche',
+    'creator_support': 'Supporto Creatore',
+    'revenue_info': 'Info Guadagni',
+    'all_rights_reserved': 'Tutti i diritti riservati. Unire le culture attraverso la narrazione.',
+    
     // Common
     'asia': 'Asia',
     'europe': 'Europa',
@@ -462,6 +606,18 @@ const translations = {
     'site_menu': 'Μενού Ιστότοπου',
     
     // Hero section
+    'legendary_tales': 'Θρυλικές Ιστορίες',
+    'from_every_corner': 'Από Κάθε Γωνιά του Κόσμου',
+    'discover_enchanting_stories': 'Ανακαλύψτε μαγευτικές ιστορίες και θρύλους από όλους τους πολιτισμούς του κόσμου, όμορφα εικονογραφημένες σε μοντέρνο στιλ webtoon για την επόμενη γενιά αναγνωστών',
+    'more_than_150_tales': 'Περισσότερες από 150 παραδοσιακές ιστορίες, συναρπαστικοί μύθοι και αυθεντικό λαογραφικό υλικό από πάνω από 50 χώρες, προσεκτικά προσαρμοσμένα για σύγχρονες οικογένειες που επιδιώκουν να συνδεθούν με την πολιτισμική τους κληρονομιά και να εξερευνήσουν την παγκόσμια ποικιλομορφία.',
+    'explore_stories': 'Εξερευνήστε Ιστορίες',
+    'upload_your_story': 'Ανεβάστε την Ιστορία σας',
+    'available_stories': 'Διαθέσιμες Ιστορίες',
+    'countries_represented': 'Χώρες που Εκπροσωπούνται',
+    'happy_families': 'Ευτυχισμένες Οικογένειες',
+    'connect_cultural_heritage': 'Συνδεθείτε με την Πολιτισμική σας Κληρονομιά',
+    'cultural_richness_description': 'Από ιαπωνικούς δράκους έως νορδικές πριγκίπισσες, από αφρικανούς πολεμιστές έως αμερικανικά πνεύματα προγόνων, κάθε ιστορία είναι ένα παράθυρο στον πολιτισμικό πλούτο του ποικιλόμορφου κόσμου μας.',
+    
     'discover_timeless_stories': 'Ανακαλύψτε Διαχρονικές Ιστορίες από όλο τον Κόσμο',
     'hero_description': 'Βυθιστείτε σε μια μαγική συλλογή μύθων, θρύλων και λαϊκών παραμυθιών από κάθε γωνιά του πλανήτη. Κάθε ιστορία είναι ένα παράθυρο σε αρχαίους πολιτισμούς και παγκόσμια σοφία.',
     'start_reading': 'Ξεκινήστε να Διαβάζετε',
@@ -470,7 +626,7 @@ const translations = {
     // Browse by Culture
     'explore_tales_by_culture': 'Εξερευνήστε Ιστορίες ανά Πολιτισμό',
     'culture_description': 'Βυθιστείτε σε ένα πλούσιο ύφασμα παραδοσιακών αφηγήσεων από όλο τον κόσμο.',
-    'asia_description': 'Δράκοι, σαμουράι και ανcestral σοφία',
+    'asia_description': 'Δράκοι, σαμουράι και προγονική σοφία',
     'europe_description': 'Νεράιδες, ιππότες και μαγεμένα κάστρα',
     'africa_description': 'Πνεύματα της φύσης και γενναίοι ήρωες',
     'americas_description': 'Αρχαίοι θεοί και επικές περιπέτειες',
@@ -525,6 +681,23 @@ const translations = {
     'education_description': 'Προάγει την κατανόηση και εκτίμηση διαφορετικών πολιτισμών, προωθώντας αξίες ανεκτικότητας και ποικιλομορφίας.',
     'innovative_technology': 'Καινοτόμος Τεχνολογία',
     'technology_description': 'Πλατφόρμα βελτιστοποιημένη για κινητές συσκευές με διαδραστικά χαρακτηριστικά και εξαιρετική εμπειρία χρήστη.',
+    
+    // Upload Section
+    'share_your_stories': 'Μοιραστείτε τις Ιστορίες σας',
+    'upload_description': 'Έχετε μια παραδοσιακή ιστορία από τον πολιτισμό σας που θα θέλατε να μοιραστείτε; Θα θέλαμε πολύ να σας βοηθήσουμε να τη ζωντανέψετε στη μορφή webtoon.',
+    'ready_to_get_started': 'Έτοιμοι να Ξεκινήσετε;',
+    'contact_us': 'Επικοινωνήστε μαζί μας',
+    
+    // Footer
+    'bringing_traditional_stories': 'Ζωντανεύοντας παραδοσιακές ιστορίες και θρύλους από κάθε πολιτισμό μέσω όμορφης τέχνης στιλ webtoon. Ιδανικό για σύγχρονες οικογένειες που θέλουν να συνδεθούν με την κληρονομιά τους.',
+    'browse_stories': 'Περιηγηθείτε στις Ιστορίες',
+    'gift_cards': 'Κάρτες Δώρου',
+    'reading_lists': 'Λίστες Ανάγνωσης',
+    'family_accounts': 'Οικογενειακοί Λογαριασμοί',
+    'art_guidelines': 'Οδηγίες Τέχνης',
+    'creator_support': 'Υποστήριξη Δημιουργού',
+    'revenue_info': 'Πληροφορίες Εσόδων',
+    'all_rights_reserved': 'Όλα τα δικαιώματα διατηρούνται. Ενώνοντας πολιτισμούς μέσω της αφήγησης.',
     
     // Common
     'asia': 'Ασία',

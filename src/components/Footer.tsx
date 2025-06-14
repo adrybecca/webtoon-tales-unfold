@@ -1,7 +1,10 @@
 
 import { BookOpen, Mail, Linkedin, Instagram, Facebook, Sparkles } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Footer = () => {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-slate-900/80 backdrop-blur-sm border-t border-slate-800 py-12 px-4">
       <div className="max-w-6xl mx-auto">
@@ -17,14 +20,13 @@ export const Footer = () => {
               </div>
               <div className="ml-3">
                 <span className="text-xl font-bold bg-gradient-to-r from-white to-pink-200 bg-clip-text text-transparent">
-                  Mythic Tales
+                  {t('mythic_tales')}
                 </span>
-                <div className="text-xs text-slate-400 -mt-1">Stories that enchant</div>
+                <div className="text-xs text-slate-400 -mt-1">{t('stories_that_enchant')}</div>
               </div>
             </div>
             <p className="text-slate-400 mb-6 max-w-md">
-              Bringing traditional stories and legends from every culture to life through beautiful webtoon-style art. 
-              Perfect for modern families who want to connect with their heritage.
+              {t('bringing_traditional_stories')}
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-slate-400 hover:text-pink-400 transition-colors">
@@ -43,28 +45,28 @@ export const Footer = () => {
           </div>
           
           <div>
-            <h4 className="text-white font-semibold mb-4">For Readers</h4>
+            <h4 className="text-white font-semibold mb-4">{t('for_readers')}</h4>
             <ul className="space-y-2 text-slate-400">
-              <li><a href="#" className="hover:text-pink-400 transition-colors">Browse Stories</a></li>
-              <li><a href="#" className="hover:text-pink-400 transition-colors">Gift Cards</a></li>
-              <li><a href="#" className="hover:text-pink-400 transition-colors">Reading Lists</a></li>
-              <li><a href="#" className="hover:text-pink-400 transition-colors">Family Accounts</a></li>
+              <li><a href="#" className="hover:text-pink-400 transition-colors">{t('browse_stories')}</a></li>
+              <li><a href="#" className="hover:text-pink-400 transition-colors">{t('gift_cards')}</a></li>
+              <li><a href="#" className="hover:text-pink-400 transition-colors">{t('reading_lists')}</a></li>
+              <li><a href="#" className="hover:text-pink-400 transition-colors">{t('family_accounts')}</a></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-white font-semibold mb-4">For Creators</h4>
+            <h4 className="text-white font-semibold mb-4">{t('for_creators')}</h4>
             <ul className="space-y-2 text-slate-400">
-              <li><a href="#" className="hover:text-pink-400 transition-colors">Start Creating</a></li>
-              <li><a href="#" className="hover:text-pink-400 transition-colors">Art Guidelines</a></li>
-              <li><a href="#" className="hover:text-pink-400 transition-colors">Creator Support</a></li>
-              <li><a href="#" className="hover:text-pink-400 transition-colors">Revenue Info</a></li>
+              <li><a href="#" className="hover:text-pink-400 transition-colors">{t('start_creating')}</a></li>
+              <li><a href="#" className="hover:text-pink-400 transition-colors">{t('art_guidelines')}</a></li>
+              <li><a href="#" className="hover:text-pink-400 transition-colors">{t('creator_support')}</a></li>
+              <li><a href="#" className="hover:text-pink-400 transition-colors">{t('revenue_info')}</a></li>
             </ul>
           </div>
         </div>
         
         <div className="border-t border-slate-800 mt-8 pt-8 text-center text-slate-500">
-          <p>&copy; 2024 Mythic Tales. All rights reserved. Bringing cultures together through storytelling.</p>
+          <p>&copy; 2024 {t('mythic_tales')}. {t('all_rights_reserved')}</p>
         </div>
       </div>
     </footer>
