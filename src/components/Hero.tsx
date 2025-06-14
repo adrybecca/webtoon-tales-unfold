@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, BookOpen } from "lucide-react";
+import { ArrowRight, BookOpen, Globe } from "lucide-react";
 
 export const Hero = () => {
   const handleBrowseStoriesClick = () => {
@@ -21,11 +21,7 @@ export const Hero = () => {
       
       <div className="relative z-10 text-center max-w-4xl mx-auto">
         <div className="flex items-center justify-center mb-6">
-          <img 
-            src="/lovable-uploads/b1352845-c82b-4236-8f6c-c85970b89679.png" 
-            alt="Mythic Tales Logo" 
-            className="h-10 w-auto mr-3"
-          />
+          <Globe className="w-8 h-8 text-pink-400 mr-3" />
           <span className="text-pink-400 font-semibold text-lg tracking-wide">MYTHIC TALES</span>
         </div>
         

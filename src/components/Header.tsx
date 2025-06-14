@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { BookOpen, Menu, X } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -41,11 +41,7 @@ export const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <img 
-              src="/lovable-uploads/b1352845-c82b-4236-8f6c-c85970b89679.png" 
-              alt="Mythic Tales Logo" 
-              className="h-8 w-auto mr-3"
-            />
+            <BookOpen className="w-8 h-8 text-pink-400 mr-3" />
             <span className="text-xl font-bold text-white">Mythic Tales</span>
           </div>
 

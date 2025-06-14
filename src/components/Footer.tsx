@@ -1,5 +1,5 @@
 
-import { Mail, Linkedin, Instagram, Facebook } from "lucide-react";
+import { BookOpen, Mail, Linkedin, Instagram, Facebook } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -8,11 +8,7 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center mb-4">
-              <img 
-                src="/lovable-uploads/b1352845-c82b-4236-8f6c-c85970b89679.png" 
-                alt="Mythic Tales Logo" 
-                className="h-8 w-auto mr-3"
-              />
+              <BookOpen className="w-8 h-8 text-pink-400 mr-3" />
               <span className="text-xl font-bold text-white">Mythic Tales</span>
             </div>
             <p className="text-slate-400 mb-6 max-w-md">
