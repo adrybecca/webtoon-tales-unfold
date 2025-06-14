@@ -33,24 +33,24 @@ export const Hero = () => {
             <span className="text-pink-400 font-bold text-2xl tracking-wide bg-gradient-to-r from-pink-400 to-violet-400 bg-clip-text text-transparent">
               MYTHIC TALES
             </span>
-            <div className="text-slate-400 text-sm mt-1">Historias que encantan al mundo</div>
+            <div className="text-slate-400 text-sm mt-1">Stories that enchant the world</div>
           </div>
         </div>
         
         <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-pink-200 to-purple-300 bg-clip-text text-transparent mb-6 leading-tight">
-          Cuentos Legendarios
+          Legendary Tales
           <br />
           <span className="text-4xl md:text-6xl bg-gradient-to-r from-pink-400 to-violet-400 bg-clip-text text-transparent">
-            De Cada Rincón del Mundo
+            From Every Corner of the World
           </span>
         </h1>
         
         <p className="text-xl md:text-2xl text-slate-300 mb-6 max-w-4xl mx-auto leading-relaxed">
-          Descubre historias encantadoras y leyendas de todas las culturas del mundo, bellamente ilustradas en estilo webtoon moderno para la próxima generación de lectores
+          Discover enchanting stories and legends from all cultures of the world, beautifully illustrated in modern webtoon style for the next generation of readers
         </p>
         
         <p className="text-lg text-slate-400 mb-8 max-w-3xl mx-auto">
-          Más de 150 cuentos tradicionales, mitos fascinantes y folklore auténtico de 50+ países, cuidadosamente adaptados para familias modernas que buscan conectar con su herencia cultural y explorar la diversidad mundial. Cada historia preserva la esencia original mientras incorpora elementos visuales contemporáneos que cautivan a lectores de todas las edades.
+          More than 150 traditional tales, fascinating myths and authentic folklore from 50+ countries, carefully adapted for modern families seeking to connect with their cultural heritage and explore global diversity. Each story preserves the original essence while incorporating contemporary visual elements that captivate readers of all ages.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -60,7 +60,7 @@ export const Hero = () => {
             className="bg-gradient-to-r from-pink-500 to-violet-600 hover:from-pink-600 hover:to-violet-700 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-pink-500/25 transition-all duration-300 transform hover:scale-105"
           >
             <BookOpen className="w-5 h-5 mr-2" />
-            Explorar Historias
+            Explore Stories
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
           
@@ -75,31 +75,31 @@ export const Hero = () => {
             }}
             className="border-2 border-pink-400/50 text-pink-200 hover:bg-pink-400/10 px-8 py-4 rounded-full text-lg font-semibold backdrop-blur-sm"
           >
-            Subir Tu Historia
+            Upload Your Story
           </Button>
         </div>
         
         <div className="mt-12 flex items-center justify-center space-x-8 text-slate-400">
           <div className="text-center">
             <div className="text-2xl font-bold text-white">150+</div>
-            <div className="text-sm">Historias Disponibles</div>
+            <div className="text-sm">Available Stories</div>
           </div>
           <div className="w-px h-8 bg-slate-600" />
           <div className="text-center">
             <div className="text-2xl font-bold text-white">50+</div>
-            <div className="text-sm">Países Representados</div>
+            <div className="text-sm">Countries Represented</div>
           </div>
           <div className="w-px h-8 bg-slate-600" />
           <div className="text-center">
             <div className="text-2xl font-bold text-white">10K+</div>
-            <div className="text-sm">Familias Felices</div>
+            <div className="text-sm">Happy Families</div>
           </div>
         </div>
         
         <div className="mt-16 text-center">
-          <h3 className="text-2xl font-bold text-white mb-4">Conecta con tu Herencia Cultural</h3>
+          <h3 className="text-2xl font-bold text-white mb-4">Connect with Your Cultural Heritage</h3>
           <p className="text-slate-400 max-w-2xl mx-auto">
-            Desde dragones japoneses hasta princesas nórdicas, desde guerreros africanos hasta espíritus ancestrales americanos, cada historia es una ventana hacia la riqueza cultural de nuestro mundo diverso.
+            From Japanese dragons to Nordic princesses, from African warriors to ancestral American spirits, each story is a window into the cultural richness of our diverse world.
           </p>
         </div>
       </div>

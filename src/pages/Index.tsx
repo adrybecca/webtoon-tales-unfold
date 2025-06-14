@@ -20,22 +20,22 @@ const Index = () => {
       <section id="cultures" className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent mb-8">
-            Explora Cuentos por Cultura
+            Explore Tales by Culture
           </h2>
           <p className="text-xl text-slate-400 mb-8 max-w-3xl mx-auto">
-            Sumérgete en un rico tapiz de tradiciones narrativas de todo el mundo. Cada cultura tiene sus propias historias únicas que han sido transmitidas de generación en generación, moldeando valores, enseñando lecciones importantes y preservando la sabiduría ancestral.
+            Immerse yourself in a rich tapestry of storytelling traditions from around the world. Each culture has its own unique stories that have been passed down from generation to generation, shaping values, teaching important lessons and preserving ancestral wisdom.
           </p>
           <p className="text-lg text-slate-500 mb-12 max-w-4xl mx-auto">
-            Nuestras colecciones incluyen mitos clásicos, leyendas heroicas, cuentos de hadas tradicionales, fábulas morales y relatos de creación. Desde los dragones místicos de Asia hasta los valientes guerreros de África, desde las princesas encantadas de Europa hasta los espíritus ancestrales de América, cada historia está cuidadosamente adaptada para lectores modernos mientras preserva su esencia cultural auténtica.
+            Our collections include classic myths, heroic legends, traditional fairy tales, moral fables and creation stories. From the mystical dragons of Asia to the brave warriors of Africa, from the enchanted princesses of Europe to the ancestral spirits of America, each story is carefully adapted for modern readers while preserving its authentic cultural essence.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {[
-              { name: 'Asia', description: 'Dragones, samuráis y sabiduría ancestral' },
-              { name: 'Europa', description: 'Hadas, caballeros y castillos encantados' },
-              { name: 'África', description: 'Espíritus de la naturaleza y héroes valientes' },
-              { name: 'Américas', description: 'Dioses antiguos y aventuras épicas' },
-              { name: 'Oceanía', description: 'Sueños ancestrales y mitos de creación' },
-              { name: 'Medio Oriente', description: 'Genios mágicos y cuentos de las mil y una noches' }
+              { name: 'Asia', description: 'Dragons, samurai and ancestral wisdom' },
+              { name: 'Europe', description: 'Fairies, knights and enchanted castles' },
+              { name: 'Africa', description: 'Nature spirits and brave heroes' },
+              { name: 'Americas', description: 'Ancient gods and epic adventures' },
+              { name: 'Oceania', description: 'Ancestral dreams and creation myths' },
+              { name: 'Middle East', description: 'Magic genies and tales of the Arabian nights' }
             ].map((culture) => (
               <div key={culture.name} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-colors cursor-pointer">
                 <h3 className="text-white font-semibold mb-2">{culture.name}</h3>
@@ -50,40 +50,40 @@ const Index = () => {
       <section className="py-20 px-4 bg-slate-800/20">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent mb-16 text-center">
-            Lo Que Dicen Nuestras Familias
+            What Our Families Say
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-slate-800/40 rounded-lg p-8">
               <p className="text-slate-300 mb-6 italic">
-                "Mythic Tales ha transformado la hora del cuento en nuestra familia. Mis hijos ahora conocen historias de sus abuelos y de culturas de todo el mundo. Las ilustraciones estilo webtoon son absolutamente hermosas y mantienen a los niños completamente absortos."
+                "Mythic Tales has transformed story time in our family. My children now know stories from their grandparents and from cultures around the world. The webtoon-style illustrations are absolutely beautiful and keep the kids completely absorbed."
               </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-violet-500 rounded-full flex items-center justify-center mr-4">
                   <span className="text-white font-bold">M</span>
                 </div>
                 <div>
-                  <h4 className="text-white font-semibold">María González</h4>
-                  <p className="text-slate-400 text-sm">Madre de 3 hijos, Madrid</p>
+                  <h4 className="text-white font-semibold">Maria González</h4>
+                  <p className="text-slate-400 text-sm">Mother of 3, Madrid</p>
                 </div>
               </div>
             </div>
             <div className="bg-slate-800/40 rounded-lg p-8">
               <p className="text-slate-300 mb-6 italic">
-                "Como educadora, recomiendo Mythic Tales a todos los padres. Es una herramienta increíble para enseñar diversidad cultural y valores universales. Los niños aprenden sobre tolerancia, respeto y la riqueza de diferentes tradiciones mientras se divierten."
+                "As an educator, I recommend Mythic Tales to all parents. It's an incredible tool for teaching cultural diversity and universal values. Children learn about tolerance, respect and the richness of different traditions while having fun."
               </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mr-4">
                   <span className="text-white font-bold">A</span>
                 </div>
                 <div>
-                  <h4 className="text-white font-semibold">Ana Rodríguez</h4>
-                  <p className="text-slate-400 text-sm">Profesora de Primaria, Barcelona</p>
+                  <h4 className="text-white font-semibold">Ana Rodriguez</h4>
+                  <p className="text-slate-400 text-sm">Elementary Teacher, Barcelona</p>
                 </div>
               </div>
             </div>
             <div className="bg-slate-800/40 rounded-lg p-8">
               <p className="text-slate-300 mb-6 italic">
-                "Mis abuelos me contaban estas historias cuando era pequeño, y ahora puedo compartirlas con mis nietos de una manera moderna y atractiva. La calidad artística y narrativa es excepcional. Es como tener una biblioteca mundial en casa."
+                "My grandparents told me these stories when I was little, and now I can share them with my grandchildren in a modern and engaging way. The artistic and narrative quality is exceptional. It's like having a world library at home."
               </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mr-4">
@@ -91,7 +91,7 @@ const Index = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-semibold">José Martinez</h4>
-                  <p className="text-slate-400 text-sm">Abuelo y bibliotecario jubilado, Sevilla</p>
+                  <p className="text-slate-400 text-sm">Grandfather and retired librarian, Seville</p>
                 </div>
               </div>
             </div>
@@ -103,49 +103,49 @@ const Index = () => {
       <section id="readers" className="py-20 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent mb-8">
-            Para Lectores y Familias
+            For Readers and Families
           </h2>
           <p className="text-xl text-slate-400 mb-8 max-w-3xl mx-auto">
-            Mythic Tales está diseñado pensando en las familias modernas que buscan conectar con sus raíces culturales y explorar la diversidad del mundo. Ofrecemos una experiencia de lectura inmersiva que combina tradición con innovación tecnológica.
+            Mythic Tales is designed with modern families in mind who seek to connect with their cultural roots and explore the diversity of the world. We offer an immersive reading experience that combines tradition with technological innovation.
           </p>
           <p className="text-lg text-slate-500 mb-12 max-w-4xl mx-auto">
-            Nuestra plataforma permite a los padres seleccionar historias apropiadas para la edad de sus hijos, crear listas de lectura personalizadas y seguir el progreso de lectura familiar. Cada historia incluye guías de discusión para fomentar conversaciones significativas sobre valores, cultura e historia. Las cuentas familiares permiten que hasta 6 miembros accedan a todo el contenido con perfiles individualizados.
+            Our platform allows parents to select age-appropriate stories for their children, create personalized reading lists and track family reading progress. Each story includes discussion guides to foster meaningful conversations about values, culture and history. Family accounts allow up to 6 members to access all content with individualized profiles.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-slate-800/50 rounded-lg p-8">
-              <h3 className="text-2xl font-bold text-white mb-4">Biblioteca Curada</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Curated Library</h3>
               <p className="text-slate-400 mb-4">
-                Más de 150 historias cuidadosamente seleccionadas y adaptadas por expertos en literatura infantil, antropólogos culturales y educadores especializados en desarrollo infantil.
+                More than 150 stories carefully selected and adapted by experts in children's literature, cultural anthropologists and educators specializing in child development.
               </p>
               <ul className="text-slate-500 text-sm space-y-2">
-                <li>• Clasificación por edades (3-5, 6-8, 9-12 años)</li>
-                <li>• Filtros por cultura y región geográfica</li>
-                <li>• Categorías temáticas (aventura, amistad, valentía)</li>
-                <li>• Actualizaciones mensuales con nuevas historias</li>
+                <li>• Age classification (3-5, 6-8, 9-12 years)</li>
+                <li>• Filters by culture and geographic region</li>
+                <li>• Thematic categories (adventure, friendship, courage)</li>
+                <li>• Monthly updates with new stories</li>
               </ul>
             </div>
             <div className="bg-slate-800/50 rounded-lg p-8">
-              <h3 className="text-2xl font-bold text-white mb-4">Herramientas Educativas</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Educational Tools</h3>
               <p className="text-slate-400 mb-4">
-                Recursos complementarios que enriquecen la experiencia de lectura y fomentan el aprendizaje intercultural, desarrollando habilidades de pensamiento crítico y comprensión lectora.
+                Complementary resources that enrich the reading experience and foster intercultural learning, developing critical thinking skills and reading comprehension.
               </p>
               <ul className="text-slate-500 text-sm space-y-2">
-                <li>• Guías de discusión para padres e hijos</li>
-                <li>• Mapas interactivos de origen cultural</li>
-                <li>• Glosarios de términos culturales</li>
-                <li>• Actividades creativas relacionadas</li>
+                <li>• Discussion guides for parents and children</li>
+                <li>• Interactive maps of cultural origin</li>
+                <li>• Glossaries of cultural terms</li>
+                <li>• Related creative activities</li>
               </ul>
             </div>
             <div className="bg-slate-800/50 rounded-lg p-8">
-              <h3 className="text-2xl font-bold text-white mb-4">Experiencia Personalizada</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Personalized Experience</h3>
               <p className="text-slate-400 mb-4">
-                Cuentas familiares completas que se adaptan a las preferencias y necesidades de cada familia, con controles parentales y seguimiento de progreso educativo.
+                Complete family accounts that adapt to each family's preferences and needs, with parental controls and educational progress tracking.
               </p>
               <ul className="text-slate-500 text-sm space-y-2">
-                <li>• Perfiles individuales para cada miembro</li>
-                <li>• Recomendaciones basadas en intereses</li>
-                <li>• Modo de lectura nocturna</li>
-                <li>• Sincronización entre dispositivos</li>
+                <li>• Individual profiles for each member</li>
+                <li>• Recommendations based on interests</li>
+                <li>• Night reading mode</li>
+                <li>• Synchronization across devices</li>
               </ul>
             </div>
           </div>
@@ -156,49 +156,49 @@ const Index = () => {
       <section id="creators" className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent mb-8">
-            Para Creadores y Artistas
+            For Creators and Artists
           </h2>
           <p className="text-xl text-slate-400 mb-8 max-w-3xl mx-auto">
-            Únete a nuestra comunidad global de narradores, ilustradores y preservadores de cultura. Mythic Tales ofrece una plataforma única para que los creadores compartan historias tradicionales de sus culturas con el mundo moderno.
+            Join our global community of storytellers, illustrators and culture preservers. Mythic Tales offers a unique platform for creators to share traditional stories from their cultures with the modern world.
           </p>
           <p className="text-lg text-slate-500 mb-12 max-w-4xl mx-auto">
-            Nuestro programa de creadores está diseñado para apoyar tanto a artistas establecidos como a nuevos talentos. Proporcionamos herramientas profesionales de creación, mentorías con expertos en narrativa digital, y oportunidades de monetización justas. Cada historia pasa por un proceso de revisión cultural para asegurar autenticidad y respeto hacia las tradiciones originales.
+            Our creator program is designed to support both established artists and new talent. We provide professional creation tools, mentorships with digital storytelling experts, and fair monetization opportunities. Each story goes through a cultural review process to ensure authenticity and respect for original traditions.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-slate-800/50 rounded-lg p-8">
-              <h3 className="text-2xl font-bold text-white mb-4">Herramientas Profesionales</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Professional Tools</h3>
               <p className="text-slate-400 mb-4">
-                Suite completa de herramientas de creación digital optimizadas para el formato webtoon, incluyendo plantillas prediseñadas, bibliotecas de recursos culturales y sistemas de colaboración.
+                Complete suite of digital creation tools optimized for webtoon format, including pre-designed templates, cultural resource libraries and collaboration systems.
               </p>
               <ul className="text-slate-500 text-sm space-y-2">
-                <li>• Editor de webtoon integrado</li>
-                <li>• Biblioteca de elementos culturales auténticos</li>
-                <li>• Plantillas responsive para móviles</li>
-                <li>• Herramientas de colorizado avanzadas</li>
+                <li>• Integrated webtoon editor</li>
+                <li>• Library of authentic cultural elements</li>
+                <li>• Responsive templates for mobile</li>
+                <li>• Advanced coloring tools</li>
               </ul>
             </div>
             <div className="bg-slate-800/50 rounded-lg p-8">
-              <h3 className="text-2xl font-bold text-white mb-4">Apoyo y Mentorías</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Support and Mentoring</h3>
               <p className="text-slate-400 mb-4">
-                Programa de mentorías con expertos en narrativa digital, antropólogos culturales y artistas establecidos que guían a los nuevos creadores en el proceso de adaptación cultural.
+                Mentorship program with digital storytelling experts, cultural anthropologists and established artists who guide new creators through the cultural adaptation process.
               </p>
               <ul className="text-slate-500 text-sm space-y-2">
-                <li>• Sesiones de mentoría individualizadas</li>
-                <li>• Talleres de narrativa intercultural</li>
-                <li>• Revisión por expertos culturales</li>
-                <li>• Comunidad de creadores activa</li>
+                <li>• Individualized mentoring sessions</li>
+                <li>• Intercultural storytelling workshops</li>
+                <li>• Review by cultural experts</li>
+                <li>• Active creator community</li>
               </ul>
             </div>
             <div className="bg-slate-800/50 rounded-lg p-8">
-              <h3 className="text-2xl font-bold text-white mb-4">Oportunidades de Ingresos</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Revenue Opportunities</h3>
               <p className="text-slate-400 mb-4">
-                Modelo de monetización transparente y justo que permite a los creadores obtener ingresos significativos por su trabajo, con opciones de licenciamiento y derechos de autor protegidos.
+                Transparent and fair monetization model that allows creators to earn significant income from their work, with licensing options and protected copyright.
               </p>
               <ul className="text-slate-500 text-sm space-y-2">
-                <li>• 70% de ingresos para el creador</li>
-                <li>• Pagos mensuales garantizados</li>
-                <li>• Opciones de licenciamiento exclusivo</li>
-                <li>• Bonificaciones por popularidad</li>
+                <li>• 70% revenue for the creator</li>
+                <li>• Guaranteed monthly payments</li>
+                <li>• Exclusive licensing options</li>
+                <li>• Popularity bonuses</li>
               </ul>
             </div>
           </div>
@@ -209,34 +209,34 @@ const Index = () => {
       <section className="py-20 px-4 bg-gradient-to-r from-purple-900/20 to-pink-900/20">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent mb-8">
-            ¿Por Qué Elegir Mythic Tales?
+            Why Choose Mythic Tales?
           </h2>
           <p className="text-xl text-slate-400 mb-12 max-w-3xl mx-auto">
-            En un mundo cada vez más globalizado, preservar y compartir nuestras tradiciones culturales es más importante que nunca. Mythic Tales combina la riqueza de las historias tradicionales con la innovación del arte digital moderno.
+            In an increasingly globalized world, preserving and sharing our cultural traditions is more important than ever. Mythic Tales combines the richness of traditional stories with the innovation of modern digital art.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-slate-800/40 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-white mb-3">Autenticidad Cultural</h3>
+              <h3 className="text-xl font-bold text-white mb-3">Cultural Authenticity</h3>
               <p className="text-slate-400 text-sm">
-                Cada historia es revisada por expertos culturales para asegurar precisión histórica y respeto hacia las tradiciones originales.
+                Each story is reviewed by cultural experts to ensure historical accuracy and respect for original traditions.
               </p>
             </div>
             <div className="bg-slate-800/40 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-white mb-3">Arte de Calidad Premium</h3>
+              <h3 className="text-xl font-bold text-white mb-3">Premium Quality Art</h3>
               <p className="text-slate-400 text-sm">
-                Ilustraciones profesionales en estilo webtoon que combinan técnicas tradicionales con tecnología digital de vanguardia.
+                Professional illustrations in webtoon style that combine traditional techniques with cutting-edge digital technology.
               </p>
             </div>
             <div className="bg-slate-800/40 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-white mb-3">Educación Intercultural</h3>
+              <h3 className="text-xl font-bold text-white mb-3">Intercultural Education</h3>
               <p className="text-slate-400 text-sm">
-                Fomenta la comprensión y apreciación de diferentes culturas, promoviendo valores de tolerancia y diversidad.
+                Fosters understanding and appreciation of different cultures, promoting values of tolerance and diversity.
               </p>
             </div>
             <div className="bg-slate-800/40 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-white mb-3">Tecnología Innovadora</h3>
+              <h3 className="text-xl font-bold text-white mb-3">Innovative Technology</h3>
               <p className="text-slate-400 text-sm">
-                Plataforma optimizada para dispositivos móviles con funciones interactivas y experiencia de usuario excepcional.
+                Platform optimized for mobile devices with interactive features and exceptional user experience.
               </p>
             </div>
           </div>
