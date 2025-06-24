@@ -1,4 +1,3 @@
-
 import { BookOpen, Mail, Linkedin, Instagram, Facebook, Sparkles } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -48,6 +47,7 @@ export const Footer = () => {
             <h4 className="text-white font-semibold mb-4">{t('for_readers')}</h4>
             <ul className="space-y-2 text-slate-400">
               <li><a href="#" className="hover:text-pink-400 transition-colors">{t('browse_stories')}</a></li>
+              <li><a href="/subscribe" className="hover:text-pink-400 transition-colors">Suscribirse</a></li>
               <li><a href="#" className="hover:text-pink-400 transition-colors">{t('gift_cards')}</a></li>
               <li><a href="#" className="hover:text-pink-400 transition-colors">{t('reading_lists')}</a></li>
               <li><a href="#" className="hover:text-pink-400 transition-colors">{t('family_accounts')}</a></li>

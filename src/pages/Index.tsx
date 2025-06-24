@@ -417,6 +417,35 @@ const Index = () => {
       <section id="upload">
         <UploadSection />
       </section>
+
+      {/* New Subscription CTA Section */}
+      <section className="py-16 px-4 bg-gradient-to-r from-pink-900/30 to-violet-900/30">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700/50">
+            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-white via-pink-200 to-purple-300 bg-clip-text text-transparent mb-6">
+              ¡Únete a Nuestra Comunidad!
+            </h2>
+            <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
+              Suscríbete para recibir las historias más encantadoras, destacados de creadores y ofertas especiales directamente en tu email.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                size="lg"
+                onClick={() => window.location.href = '/subscribe'}
+                className="bg-gradient-to-r from-pink-500 to-violet-500 hover:from-pink-600 hover:to-violet-600 text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-pink-500/25 transition-all duration-300"
+              >
+                <BookOpen className="w-5 h-5 mr-2" />
+                {t('subscribe_now') || 'Suscribirse Ahora'}
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </div>
+            <p className="text-sm text-slate-400 mt-4">
+              Contenido exclusivo • Sin spam • Cancela cuando quieras
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section id="contact">
         <Footer />
       </section>
